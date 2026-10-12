@@ -1,0 +1,103 @@
+server {
+    listen       8080;
+    server_name  localhost;
+
+    # access_log  /var/log/nginx/host.access.log  main;
+
+    root /usr/share/nginx/html/;
+    index index.html index.htm;
+
+    # ── Security headers (server-level baseline) ──
+    include /etc/nginx/includes/securityheaders.conf;
+
+    # ── Custom error pages ──
+    error_page 404              /404.html;
+    error_page 500 502 503 504  /50x.html;
+
+    location = /404.html {
+        root /usr/share/nginx/html;
+        internal;
+    }
+
+    location = /50x.html {
+        root /usr/share/nginx/html;
+        internal;
+    }
+
+    # ── Health check (Istio probes hit / directly) ──
+    location = /healthz.html {
+        try_files ${BASE_PATH}/healthz.html =404;
+    }
+
+    # ── Handle health checks ──
+    location /healthz {
+        add_header Content-Type text/plain;
+
+        # Include to ensure security headers still present on 200 OK (and on errors)
+        include /etc/nginx/includes/securityheaders.conf;
+
+        return 200 'OK';
+    }
+
+    # ── Normalize: /base → /base/ ──
+    location = ${BASE_PATH} {
+        absolute_redirect off;
+
+        # Include, because this location returns a 301 with its own header context
+        include /etc/nginx/includes/securityheaders.conf;
+
+        return 301 ${BASE_PATH}/;
+    }
+
+    # ── Static assets under BASE_PATH (JS, CSS, images, fonts, maps, etc.)
+    #    When publicPath is 'auto', relative <script src="bundle.js"> tags
+    #    resolve from the current page URL. A refresh on /base/foo/bar/
+    #    makes the browser request /base/foo/bar/bundle.js — which doesn't
+    #    exist on disk. The regex captures the bare filename ($1) and falls
+    #    back to ${BASE_PATH}/$1 so the asset is still found.
+    location ~* ^${BASE_PATH}/(?:.*/)?(.+\.(?:js|css|map|svg|png|jpg|jpeg|gif|ico|woff2?|ttf|eot|json|txt|xml|manifest|webmanifest|LICENSE))$ {
+        # Re-include to prevent parent add_header from being dropped
+        include /etc/nginx/includes/securityheaders.conf;
+        try_files $uri ${BASE_PATH}/$1 ${BASE_PATH}/assets/$1 =404;
+        expires 1y;
+        access_log off;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # ── webpack publicPath:'auto' support ──
+    # When publicPath is 'auto', dynamic chunk requests may arrive without
+    # the base prefix (e.g. /main.interstellar.*.bundle.js instead of
+    # /base/main.interstellar.*.bundle.js). Try the file at the requested
+    # path first, then fall back to looking inside BASE_PATH.
+    location ~* ^/(?!${BASE_PATH}/).+\.(?:js|css|map|svg|png|jpg|jpeg|gif|ico|woff2?|ttf|eot)$ {
+        include /etc/nginx/includes/securityheaders.conf;
+        try_files $uri ${BASE_PATH}$uri ${BASE_PATH}/assets$uri =404;
+        expires 1y;
+        access_log off;
+        # add_header Content-Encoding gzip;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # ── Cache-bust HTML/JSON served under BASE_PATH (never cache) ──
+    location ~* ^${BASE_PATH}/.+\.(?:manifest|appcache|html?|xml|json)$ {
+        include /etc/nginx/includes/securityheaders.conf;
+        try_files $uri =404;
+        expires -1;
+        add_header Cache-Control "no-store";
+    }
+
+    # ── SPA routes under BASE_PATH ──
+    # Anything under BASE_PATH/ not matched by a regex location above
+    # has no recognised file extension → client-side route.
+    # Serve index.html so the SPA router handles it (including rendering
+    # its own 404 page for unknown paths like /base/foo or /base/foo/bar/).
+    location ${BASE_PATH}/ {
+        absolute_redirect off;
+        try_files $uri $uri/ ${BASE_PATH}/index.html =404;
+    }
+
+    # ── Fallback: anything outside BASE_PATH → 404 ──
+    location / {
+        return 404;
+    }
+}

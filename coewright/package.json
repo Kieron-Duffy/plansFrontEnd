@@ -1,0 +1,31 @@
+{
+  "name": "coewright",
+  "version": "1.13.2",
+  "scripts": {
+    "tests:coewright": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=local",
+    "tests:coewright:examples": "cross-env ENV_FILE_NAME=.env.examples npx playwright test --config ./configs/examples.playwright.config.ts --project=local --workers=4",
+    "launch_playwright_report": "npx playwright show-report",
+    "tests:coewright:accessibility": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/accessibility.spec.ts --config ./configs/interstellar.playwright.config.ts --project=accessibility",
+    "tests:coewright:edge": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=edge",
+    "tests:coewright:crossbrowser": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=edge --project=chromium",
+    "tests:coewright:iphone": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=latestIphone",
+    "tests:coewright:android": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=latestAndroid",
+    "tests:coewright:ipadPortrait": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=ipadLatestPortrait",
+    "tests:coewright:ipadLandscape": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=ipadLatestLandscape",
+    "tests:coewright:crossdevice": "cross-env ENV_FILE_NAME=.env.interstellar npx playwright test tests/interstellar/ --config ./configs/interstellar.playwright.config.ts --project=latestIphone --project=latestAndroid --project=ipadLatestPortrait --project=ipadLatestLandscape"
+  },
+  "dependencies": {
+    "@qecoe/playwright_automation": "1.13.2",
+    "@types/node": "22.14.1",
+    "cross-env": "10.1.0"
+  },
+  "devDependencies": {
+    "@applitools/eyes-playwright": "1.46.2",
+    "@playwright/test": "1.59.1"
+  },
+  "overrides":{
+    "@applitools/core":{
+      "ws": "8.21.0"
+    }
+  }
+}

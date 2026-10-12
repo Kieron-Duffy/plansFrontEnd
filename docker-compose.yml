@@ -1,0 +1,65 @@
+version: '3.9' # optional since v1.27.0
+services:
+  lloyds:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRAND_TO_BUILD: lloyds
+        BASE_PATH: /starter-kit
+    ports:
+      - '8080:8080'
+  halifax:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRAND_TO_BUILD: halifax
+        BASE_PATH: /starter-kit
+    ports:
+      - '8081:8080'
+  bos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRAND_TO_BUILD: bos
+        BASE_PATH: /starter-kit
+    ports:
+      - '8082:8080'
+  mbna:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRAND_TO_BUILD: mbna
+        BASE_PATH: /starter-kit
+    ports:
+      - '8083:8080'
+  sw:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRAND_TO_BUILD: sw
+        BASE_PATH: /starter-kit
+    ports:
+      - '8084:8080'
+  bm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRAND_TO_BUILD: bm
+        BASE_PATH: /starter-kit
+    ports:
+      - '8085:8080'
+  bh:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRAND_TO_BUILD: bh
+        BASE_PATH: /starter-kit
+    ports:
+      - '8086:8080'

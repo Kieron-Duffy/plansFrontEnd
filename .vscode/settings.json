@@ -1,0 +1,11 @@
+{
+  "jestrunner.jestCommand": "npm test",
+  "jestrunner.changeDirectoryToWorkspaceRoot": false,
+  "jestrunner.debugOptions": {
+    "args": [
+      "-c",
+      "node_modules/@interstellar/jest-executer/dist/configs/jest/jest.config.cjs",
+      "--coverage=false"
+    ]
+  }
+}

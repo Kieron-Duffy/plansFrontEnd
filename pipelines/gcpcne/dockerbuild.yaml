@@ -1,0 +1,13 @@
+config:
+  dockerfile_path: './Dockerfile'
+  destRepo: 'gar'
+  registryUrl: 'europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main' #Not to use project specific GCR domain'eu.gcr.io/<project_id>'
+  registryProject: 'mgmt/bak/al20479/images'                  #Value should contain short name's of VS & WS with cmdb_appid as '<tier-1>/<tier-2>/<cmdb_appid>/images'
+  registryCreds: ''
+  proxy_host: 'ep.threatpulse.net:80'
+  aquaURL: 'https://6d1247bb0e.cloud.aquasec.com'
+  aquaSecImage: 'europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/mgmt/ctu/al18212/images/registry.aquasec.com/scanner'
+  dockerBuild_args:
+  skipLiveBranchCheck: 'true'
+  skipGitPush: 'true'
+  dockerCache: true                                          # Enabled docker's buildkit option to re-use previous layers incase of no changes, only enabled for GCR backend

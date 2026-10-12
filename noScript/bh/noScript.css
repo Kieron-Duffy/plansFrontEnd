@@ -1,0 +1,124 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/7e44714be82c6499dc62.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../assets/0c3acc05f62f98eb079c.woff2) format('woff2');
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  font-family: 'Titillium Web', system-ui, sans-serif;
+}
+
+.site-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 0px;
+  background-color: #202020;
+}
+
+.header-container {
+  padding: 0px 1.5rem;
+  max-width: 78rem;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 0rem auto;
+  width: 100%;
+}
+
+.logo-item {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  width: 33.3333%;
+  box-sizing: border-box;
+  left: auto;
+  margin-left: 0%;
+  min-height: 0.0625rem;
+  padding-left: calc(0.75rem);
+  padding-right: calc(0.75rem);
+  position: relative;
+  right: auto;
+}
+
+.logo-svg {
+  height: 28;
+  width: 129;
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+}
+
+.site-footer {
+  position: relative;
+  background-color: #202020;
+  margin-top: 0.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: auto;
+}
+
+.main {
+  padding: 0px 1.5rem;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 0rem auto;
+  width: 100%;
+  max-width: 78rem;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.text-warning {
+  font-style: normal;
+  margin: 0rem 0rem 1.5rem;
+  padding: 0px;
+  transition-duration: 0.1s;
+  transition-timing-function: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  display: block;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.16667;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  color: rgb(255, 255, 255);
+}
+
+.text-message {
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  margin: 0rem 0rem 1.5rem;
+  padding: 0px;
+  transition-duration: 0.1s;
+  transition-timing-function: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}

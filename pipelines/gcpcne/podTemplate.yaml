@@ -1,0 +1,166 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    jenkins: jenkins-pipeline
+spec:
+  serviceAccountName: svc-gke-local-resourcecreator
+  securityContext:
+    runAsUser: 0
+  volumes:
+  - name: dind-storage
+    emptyDir: {}
+  containers:
+  - name: jnlp
+    image: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/mgmt/ple/al21605/images/jnlp:release_v0.15.0
+    securityContext:
+      privileged: true
+      runAsNonRoot: false
+      allowPrivilegeEscalation: true
+    resources:
+      requests:
+        memory: "100Mi"
+        cpu: "100m"
+      limits:
+        memory: "2048Mi"
+        cpu: "2000m"
+  - name: docker
+    image: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/mgmt/ple/al21605/images/docker-dind-gcloud:release_v3.51.0
+    securityContext:
+      privileged: true
+      runAsNonRoot: false
+      allowPrivilegeEscalation: true
+    env:
+      - name: HTTP_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: http_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: HTTPS_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: https_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: NO_PROXY
+        value: "169.254.169.254,172.16.132.1,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+      - name: no_proxy
+        value: "169.254.169.254,172.16.132.1,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+    volumeMounts:
+      - name: dind-storage
+        mountPath: /var/lib/docker
+    resources:
+      requests:
+        memory: "100Mi"
+        cpu: "100m"
+      limits:
+        memory: "2048Mi"
+        cpu: "1"
+  - name: infra-tools
+    image: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/mgmt/ple/al21605/images/terraform-tools:release_v1.91.0
+    securityContext:
+      privileged: true
+      runAsNonRoot: false
+      allowPrivilegeEscalation: true
+    env:
+      - name: HTTP_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: http_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: HTTPS_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: https_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: NO_PROXY
+        value: "172.16.130.1,169.254.169.254,172.16.132.1,10.84.6.50,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+      - name: no_proxy
+        value: "172.16.130.1,169.254.169.254,172.16.132.1,10.84.6.50,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+    tty: true
+    command:
+    - cat
+  - name: node
+    image: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/vbp/ctl/al19757/images/vbp-web-node-alpine:20.16.0
+    securityContext:
+      privileged: true
+      runAsNonRoot: false
+      allowPrivilegeEscalation: true
+    env:
+      - name: HTTP_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: http_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: HTTPS_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: https_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: NO_PROXY
+        value: "169.254.169.254,172.16.132.1,10.84.6.50,10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+      - name: no_proxy
+        value: "169.254.169.254,172.16.132.1,10.84.6.50,10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+    tty: true
+  - name: node-debian
+    image: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/vbp/ctl/al19757/images/vbp-web-node-debian:20.16.0
+    imagePullPolicy: Always
+    securityContext:
+      privileged: true
+      runAsNonRoot: false
+      allowPrivilegeEscalation: true
+    env:
+      - name: HTTP_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: http_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: HTTPS_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: https_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: NO_PROXY
+        value: "169.254.169.254,172.16.132.1, 10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io"
+      - name: no_proxy
+        value: "169.254.169.254,172.16.132.1, 10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io"
+      - name: PUPPETEER_DOWNLOAD_HOST
+        value: "https://nexus.vbp-bld.oncp.dev/repository/linux-tooling/puppeteer"
+      - name: PUPPETEER_CHROMIUM_REVISION
+        value: "938248"
+      - name: PUPPETEER_DOWNLOAD_PATH
+        value: /home/jenkins/agent/chrome-linux
+    tty: true
+  - name: nexus-iq-cli
+    image: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/staging/vbp/ctl/al19757/images/platform_tool/sonatype/nexus-iq-cli:1.162.0-01
+    securityContext:
+      privileged: true
+      runAsNonRoot: false
+      allowPrivilegeEscalation: true
+    env:
+      - name: HTTP_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: http_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: HTTPS_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: https_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: NO_PROXY
+        value: "169.254.169.254,172.16.132.1,10.84.6.50,10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+      - name: no_proxy
+        value: "169.254.169.254,172.16.132.1,10.84.6.50,10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+    tty: true
+  - name: akamai-cli
+    image: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/vbp/ctl/al19757/images/vbp-web-akamai-debian:2.0.0
+    securityContext:
+      privileged: true
+      runAsNonRoot: false
+      allowPrivilegeEscalation: true
+    env:
+      - name: HTTP_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: http_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: HTTPS_PROXY
+        value: "http://ep.threatpulse.net:80"
+      - name: https_proxy
+        value: "http://ep.threatpulse.net:80"
+      - name: NO_PROXY
+        value: "169.254.169.254,172.16.132.1,10.84.6.50,10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+      - name: no_proxy
+        value: "169.254.169.254,172.16.132.1,10.84.6.50,10.84.6.172,10.84.6.66,.google.internal,.google.com,.googleapis.com,.cloudendpointsapis.com,.oncp.dev,.oncp.io,.gcr.io,.pkg.dev"
+    tty: true
+    command:
+      - cat

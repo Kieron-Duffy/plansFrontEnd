@@ -1,0 +1,3 @@
+image:
+  dockerImage: starterkit     # image name to scan
+  scanGating: skip            # default: high. Can be "critical", "high" or "medium" or "low" or "skip"

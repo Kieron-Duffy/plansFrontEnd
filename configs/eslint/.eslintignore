@@ -1,0 +1,12 @@
+node_modules
+dist
+## TODO: this folder needs to be removed from eslintignore and all errors fixed
+tests
+.vscode
+__generated__
+lib-cov
+coverage
+.DS_Store
+.idea
+eslint.config.ts
+**/*.js

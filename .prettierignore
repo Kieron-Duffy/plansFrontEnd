@@ -1,0 +1,16 @@
+# Ignore artifacts:
+dist
+coverage
+README.md
+CHANGELOG.md
+__generated__
+# Ignore Helm Charts
+helm-chart
+helm-overrides
+helm
+prod
+pipelines
+
+# coewright
+coewright/**/*.json
+coewright/**/*.html

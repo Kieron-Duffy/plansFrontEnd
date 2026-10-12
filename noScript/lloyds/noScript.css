@@ -1,0 +1,131 @@
+@font-face {
+  font-display: swap;
+  font-family: 'GT Ultra Median';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/5688fc972d01ca2559e9.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'GT Ultra Median';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../assets/9d3dd30644ed03ae12f2.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'GT Ultra Standard';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/23068ba8d82aa1e24d0b.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'GT Ultra Standard';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../assets/b4d8267292739a7aeb41.woff2) format('woff2');
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  font-family: 'GT Ultra Standard';
+}
+
+.site-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 0px;
+  background-color: #11b67a;
+}
+
+.header-container {
+  padding: 0px 1.5rem;
+  max-width: 78rem;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 0rem auto;
+  width: 100%;
+}
+
+.logo-item {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  width: 33.3333%;
+  box-sizing: border-box;
+  left: auto;
+  margin-left: 0%;
+  min-height: 0.0625rem;
+  padding-left: calc(0.75rem);
+  padding-right: calc(0.75rem);
+  position: relative;
+  right: auto;
+}
+
+.logo-svg {
+  height: 3.25rem;
+  width: 13.125rem;
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+}
+
+.site-footer {
+  position: relative;
+  background-color: #000000;
+  margin-top: 0.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: auto;
+}
+
+.main {
+  padding: 0px 1.5rem;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 0rem auto;
+  width: 100%;
+  max-width: 78rem;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.text-warning {
+  color: #000000;
+  font-style: normal;
+  margin: 0rem 0rem 1.5rem 0rem;
+  padding: 0;
+  transition-duration: 0.1s;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  display: block;
+  font-family: 'GT Ultra Median', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.1666666666666667;
+}
+
+.text-message {
+  color: #000000;
+  font-style: normal;
+  margin: 0rem 0rem 1.5rem 0rem;
+  padding: 0;
+  transition-duration: 0.1s;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  font-family: 'GT Ultra Standard', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.3333333333333333;
+}

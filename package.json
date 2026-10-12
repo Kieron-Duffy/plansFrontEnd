@@ -1,0 +1,147 @@
+{
+  "name": "journey-name",
+  "version": "6.51.2",
+  "description": "Interstellar Starter Kit",
+  "publishLockfile": true,
+  "keywords": [
+    "webpack5",
+    "react",
+    "typescript",
+    "babel",
+    "interstellar",
+    "starter kit"
+  ],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "blank": "interstellar run blank && interstellar run lint --fix && interstellar run format --write",
+    "build": "interstellar run build",
+    "constellation:storybook": "interstellar run storybook",
+    "dev": "interstellar run dev --open true",
+    "dev:bos2025": "interstellar run dev --brand bos2025 --open true --port 8089 ",
+    "dev:lloyds2023": "interstellar run dev --brand lloyds2023 --open true --port 8088 ",
+    "dev:bh": "interstellar run dev --brand bh --open true --port 8087",
+    "dev:bm": "interstellar run dev --brand bm --open true --port 8086",
+    "dev:bos": "interstellar run dev --brand bos --open true --port 8083",
+    "dev:halifax": "interstellar run dev --brand halifax --open true --port 8082",
+    "dev:lloyds": "interstellar run dev --brand lloyds --open true --port 8081 ",
+    "dev:mbna": "interstellar run dev --brand mbna --open true --port 8084",
+    "dev:sw": "interstellar run dev --brand sw --open true --port 8085",
+    "federation-config": "interstellar run configureFederation && interstellar run format --write",
+    "format": "interstellar run format",
+    "format:fix": "interstellar run format --write",
+    "lint": "interstellar run lint",
+    "lint:fix": "interstellar run lint --fix",
+    "start-mock-server": "interstellar run startmockserver --port 9000",
+    "prepack": "cpy package-lock.json . --rename=package-lock.json.cpy && cpy .gitignore . --rename=.gitignore.cpy && npm run prepack-coewright",
+    "prepack-coewright": "cd coewright && cpy package-lock.json . --rename=package-lock.json.cpy",
+    "precommit": "lint-staged --no-stash && npm run typecheck",
+    "prepare": "cpy .env.example . --rename=.env",
+    "switch-bridge": "interstellar run switchbridge",
+    "rimraf-executer": "interstellar run rimraf-executer",
+    "test": "interstellar run test:unit",
+    "test:coverage": "interstellar run test:unit --coverage --coverageProvider=v8",
+    "test:report": "interstellar run test:unit --reporters=\"jest-html-reporters\"",
+    "test:watch": "interstellar run test:unit --watchAll",
+    "typecheck": "interstellar run typecheck",
+    "unlink": "npm unlink --no-save @interstellar/react-app && rm -rf $(npm root -g | tr '\\' '/')/@interstellar"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,html,css}": [
+      "npm run format:fix --"
+    ],
+    "*.{ts,tsx}": [
+      "npm run lint:fix --"
+    ]
+  },
+  "dependencies": {
+    "@constellation/core": "4.0.0",
+    "@constellation/themes": "4.0.0",
+    "@interstellar/react-app-content": "6.51.2",
+    "@interstellar/react-app-routing": "6.51.2",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "styled-components": "6.5.2"
+  },
+  "devDependencies": {
+    "@constellation/storybook": "4.0.0",
+    "@interstellar/eslint-config-clean-code": "6.51.2",
+    "@interstellar/mockserver": "6.51.2",
+    "@interstellar/react-app": "6.51.2",
+    "@interstellar/typescript-config-react": "6.51.2",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.4",
+    "@types/jest": "30.0.0",
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "cpy-cli": "5.0.0",
+    "jest": "30.4.2",
+    "jest-html-reporters": "3.1.7",
+    "jiti": "2.7.0",
+    "lint-staged": "15.5.1",
+    "msw": "2.15.0",
+    "nodemon": "3.1.14",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "webpack-cli": "5.1.4",
+    "@interstellar/nga-bridge": "6.51.2",
+    "@interstellar/nga-bridge-react": "6.51.2"
+  },
+  "interstellar": {
+    "journeyName": "journey-name"
+  },
+  "overrides": {
+    "webpack": "5.107.1",
+    "@babel/helper-globals": "7.28.0",
+    "@eslint/compat": "2.1.0",
+    "@eslint/config-helpers": "0.4.1",
+    "@eslint/core": "0.16.0",
+    "@eslint/plugin-kit": "0.4.0",
+    "array-includes": {
+      "es-abstract": "1.24.0"
+    },
+    "bare-fs": "4.5.4",
+    "baseline-browser-mapping": "2.10.37",
+    "brace-expansion": "5.0.9",
+    "browserslist": "4.28.0",
+    "msw": {
+      "@inquirer/core": "9.0.3",
+      "@inquirer/type": "3.0.2"
+    },
+    "@inquirer/confirm": {
+      "@inquirer/core": "10.1.7"
+    },
+    "copyfiles": {
+      "glob": "7.2.0"
+    },
+    "diff": "8.0.3",
+    "eslint": "10.8.1",
+    "eslint-module-utils": "2.14.0",
+    "eslint-plugin-prettier": "5.5.6",
+    "eslint-visitor-keys": "4.0.0",
+    "glob": "12.0.0",
+    "minimatch": "8.0.6",
+    "path-scurry": "1.11.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router": {
+      "set-cookie-parser": "2.7.1"
+    },
+    "tar-fs": "3.1.1",
+    "test-exclude": {
+      "glob": "7.2.0"
+    },
+    "tldts": "7.4.2",
+    "tldts-core": "7.4.2",
+    "ts-node": {
+      "@tsconfig/node10": "1.0.11"
+    },
+    "undici": "7.24.0",
+    "tmp": "0.2.7",
+    "webpack-dev-server": "5.2.6",
+    "ws": "8.21.0",
+    "globals": "17.11.0"
+  }
+}

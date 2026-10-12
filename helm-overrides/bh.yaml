@@ -1,0 +1,115 @@
+# Default values for app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+brand: bh
+journeyName: starter-kit # will be injected by pipeline in BLD
+valuestream: vbp
+namespace: ns-kcl-vbp-chf-is-sk
+
+# image to deploy
+image:
+  baseRepository: europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/vbp/chf/al19757/images/interstellar-core # chart will append JourneyName and brand to image name
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+# roleBinding is required as clusters have pod-security-policy enabled
+roleBinding:
+  enabled: true
+  roleRefName: psp:restrictive
+  kind: "" # defaults to ClusterRole
+  annotations: {}
+
+# probes used to check web server health status
+healthProbes:
+  livenessPath: /healthz
+  readinessPath: /healthz
+
+# kubernetes service
+service:
+  type: ClusterIP
+  port: 80
+  containerPort: 8080
+
+# ingress
+ingress:
+  enabled: true
+  className: nginx
+  extraAnnotations: {}
+    # nginx.ingress.kubernetes.io/enable-rewrite-log: "true"
+  hostNameOverride: ""
+  rootSubdomain: "interstellar-sdk"
+  prSubdomain: "" # populated by pipeline
+  # prSubdomain: "pr-xyz"
+  pathType: ImplementationSpecific
+  tlsSecretName: "secret-kcl-vbp-chf-tls-lloyds.interstellar-sdk"
+  # tlsSecretName: chart-example-tls
+  # optional vars #
+  pathPrefix: ""
+
+serviceAccount:
+  # Annotations to add to the service account
+  annotations: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+
+# adds extra envrionment variables into the container by dumping yaml into template
+# on GCP secrets should be consumed via Google Secret Manager (GSM)
+envVars: {}
+  # envFrom:
+  #   - secretRef:
+  #       name: secret-name
+  # env:
+  #   - name: VAR_NAME
+  #     value: VAR_VALUE
+  #   - name: NODE_NAME
+  #     valueFrom:
+  #       fieldRef:
+  #         fieldPath: spec.nodeName
+  #   - name: SECRET_NAME
+  #     valueFrom:
+  #       secretKeyRef:
+  #         name: secret-name
+  #         key: secret-key
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+# securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

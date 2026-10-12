@@ -1,0 +1,258 @@
+/* groovylint-disable CompileStatic, DuplicateNumberLiteral, DuplicateStringLiteral, NestedBlockDepth */
+library identifier: 'jenkins-sharedlib-bakery-lifecycle@master', retriever: modernSCM([$class: 'GitSCMSource',
+  remote: 'https://github.com/lbg-gcp-foundation/jenkins-sharedlib-bakery-lifecycle.git',
+  credentialsId: 'jenkinsPAT'])
+
+library identifier: 'jenkins-sharedlib-helm-charts@master', retriever: modernSCM([$class: 'GitSCMSource',
+  remote: 'https://github.com/lbg-gcp-foundation/jenkins-sharedlib-helm-charts.git',
+  credentialsId: 'jenkinsPAT'])
+
+library identifier: 'vbp-jenkins-sharedlib-interstellar@main', retriever: modernSCM([$class: 'GitSCMSource',
+  remote: 'https://github.com/lbg-gcp-foundation/vbp-jenkins-sharedlib-interstellar.git',
+  credentialsId: 'jenkinsPAT'])
+
+properties ([
+  buildDiscarder(
+    logRotator(
+      artifactDaysToKeepStr: '30',
+      artifactNumToKeepStr: '',
+      daysToKeepStr: '90',
+      numToKeepStr: ''
+    )
+  ),
+  disableConcurrentBuilds()
+])
+
+pipeline {
+  parameters {
+    booleanParam(name: 'NS_DEPLOYMENT', defaultValue: false, description: 'Deploy to Akamai NetStorage')
+    booleanParam(name: 'NS_DISTINCT_BUILD', defaultValue: false, description: 'Enable Distinct Build on PR')
+  }
+
+  environment {
+    GITHUB_COMMON_CREDS = credentials('jenkinsPAT')                               // github credential for authentication
+    CMDB_APPID = 'AL00000'                                                        // application id registered on cmdb
+    VS_NAME = 'vbp'                                                               // valuestream or tier-1
+    WS_NAME = 'chf'                                                               // workstream or tier-2
+    APP_NAME = 'starterkit'                                                       // application name
+    BASE_PATH = "/${APP_NAME}"                                                    // application base path
+    ROOT_SUBDOMAIN = 'interstellar-sdk'                                           // hostname subdomain -> *.<interstellar-sdk>.vbp-bld.oncp.dev
+    GCP_PROJECT_ID = 'vbp-chf-bld-4b1f'                                           // gcp project id
+    GKE_CLUSTER_NAME = 'vbp-chf-bld-kcl-01-euwe2'                                 // gke cluster name
+    GKE_CLUSTER_REGION = 'europe-west2'                                           // gke cluster region
+    GKE_NAMESPACE = 'ns-kcl-vbp-chf-is-sk'                                        // gke namespace
+    NODE_CONTAINER = 'node'                                                       // nodejs container for build
+    ENV_NAME = 'bld'                                                              // app deployed env: bld, int, pre, prd
+    NS_HOSTNAME = 'interstellar-rtl-nsu.akamaihd.net'                             // akamai netstorage http api upload domain -> https://techdocs.akamai.com/netstorage/docs/access-methods#upload-domains-for-each-access-method
+    NS_KEYNAME = 'INTERSTELLAR_ADMIN'                                             // akamai netstorage unique identifier for the upload account
+    NS_CPCODE = '1787182'                                                         // akamai netstorage content provider code -> https://techdocs.akamai.com/cp-codes/docs/about-cp-codes
+    NS_PLATFORM = 'gcpcne'                                                        // platform: gcpcne, idp
+    NS_ENV = 'dev'                                                                // akamai netstorage env: dev, rtl, prd
+    NS_UPLOAD_PATH = "/${NS_CPCODE}/${NS_PLATFORM}/${ENV_NAME}"                   // akamai netstorage upload path -> eg /1787182/gcpcne/dev
+    NS_DISTINCT_BUILD = "${params.NS_DISTINCT_BUILD}"                             // enabling distinct build on PR
+    NS_ROOT_DOMAIN = "${NS_ENV}.tcdn.lloydsbanking.cloud"                         // root domain: dev.tcdn.lloydsbanking.cloud, rtl.tcdn.lloydsbanking.cloud, cdn.lloydsbanking.cloud
+    NS_BASE_DOMAIN = "${ENV_NAME}-${NS_PLATFORM}.${NS_ROOT_DOMAIN}"               // base domain -> eg bld-gcpcne.dev.tcdn.lloydsbanking.cloud, int-idp.rtl.tcdn.lloydsbanking.cloud
+  }
+
+  options {
+    ansiColor('xterm')
+    timeout(time: 30, unit: 'MINUTES')
+    disableConcurrentBuilds()
+    buildDiscarder(logRotator(numToKeepStr: '100'))
+  }
+
+  agent {
+    kubernetes {
+      label "interstellar-${UUID.randomUUID()}"
+      yamlFile 'pipelines/gcpcne/podTemplate.yaml'
+    }
+  }
+
+  stages {
+    stage('Preparing Env') {
+      steps {
+        script {
+          env.WORKING_DIR = "${WORKSPACE}"
+
+          if (env.NS_ENV == 'prd') {
+            env.NS_ROOT_DOMAIN = "cdn.lloydsbanking.cloud"                        // production root domain -> cdn.lloydsbanking.cloud
+            env.NS_BASE_DOMAIN = "${ENV_NAME}-${NS_PLATFORM}.${NS_ROOT_DOMAIN}"   // production base domain -> prd-gcpcne.cdn.lloydsbanking.cloud
+          }
+        }
+      }
+    }
+
+    stage('Install Dependencies') {
+      steps {
+        container(env.NODE_CONTAINER) {
+          script {
+            dir(env.WORKING_DIR) {
+              sh """
+                npm ci
+              """
+            }
+          }
+        }
+      }
+    }
+
+    stage('Build') {
+      steps {
+        container(env.NODE_CONTAINER) {
+          script {
+            dir(env.WORKING_DIR) {
+              sh "BASE_PATH=${BASE_PATH} npm run build"
+            }
+          }
+        }
+      }
+    }
+
+    stage('Lint | Unit Test | Format') {
+      failFast true
+      steps {
+        script {
+          container(env.NODE_CONTAINER) {
+            dir(env.WORKING_DIR) {
+              parallel(
+                'Linting': {
+                  sh(script: """
+                    npm run lint
+                  """)
+                },
+                'Unit Testing': {
+                  sh(script: """
+                    npm run test
+                  """)
+                },
+                'Code Formatting': {
+                  sh(script: """
+                    npm run format
+                  """)
+                }
+              )
+            }
+          }
+        }
+      }
+    }
+
+    stage('Deploy to GKE Cluster') {
+      when { expression { !params.NS_DEPLOYMENT } }
+
+      stages {
+        stage('Build Docker Image') {
+          steps {
+            script {
+              dir(env.WORKING_DIR) {
+                String workDir = "."      //"${WORKSPACE}"
+                String brand = "lloyds"
+
+                // modify docker config item based on defined environment variables
+                String dockerConfig = "${workDir}/pipelines/${NS_PLATFORM}/dockerbuild.yaml"
+                Map dockerConfigYaml = readYaml(file: "${dockerConfig}")
+                env.REGISTRY_URL = dockerConfigYaml.config.registryUrl
+                dockerConfigYaml.config.registryProject = "${VS_NAME}/${WS_NAME}/${CMDB_APPID}/images/${APP_NAME}".toLowerCase()
+                dockerConfigYaml.config.dockerBuild_args = "BASE_PATH=${BASE_PATH} --build-arg BRAND_TO_BUILD=${brand}"
+                writeYaml(file: "${dockerConfig}", data: dockerConfigYaml, overwrite: true)
+
+                // modify aquascan config item based on defined environment variables
+                String aquascanConfig = "${workDir}/pipelines/${NS_PLATFORM}/aquascan.yaml"
+                Map aquascanConfigYaml = readYaml(file: "${aquascanConfig}")
+                aquascanConfigYaml.image.dockerImage = "${APP_NAME}-${brand}".toLowerCase()
+                writeYaml(file: "${aquascanConfig}", data: aquascanConfigYaml, overwrite: true)
+
+                // retrieve application version
+                Map rootPackageJson = readJSON(file: "${workDir}/package.json")
+                env.IMG_TAG = "v${rootPackageJson.version}"
+                println "IMG_TAG: ${env.IMG_TAG}"
+
+                env.IMG_FULLPATH = dockerConfigYaml.config.registryUrl + "/" + dockerConfigYaml.config.registryProject + ":${IMG_TAG}"
+                println "Docker Image: ${IMG_FULLPATH}"
+
+                Map conf = [
+                  dockerConfig: "${dockerConfig}",
+                  aquaConfig: "${aquascanConfig}",
+                  imageTag: "${IMG_TAG}"
+                ]
+
+                imageBuild(conf)
+
+                archiveArtifacts artifacts: "*.html", allowEmptyArchive: true
+              }
+            }
+          }
+        }
+
+        stage('Helm Deploy') {
+          steps {
+            container('infra-tools') {
+              script {
+                dir(env.WORKING_DIR) {
+
+                  // setup cluster connectivity: gcloud container clusters get-credentials vbp-chf-bld-kcl-01-euwe2 --region europe-west2 --project vbp-chf-bld-4b1f
+                  sh """
+                    gcloud container clusters get-credentials ${GKE_CLUSTER_NAME} --region ${GKE_CLUSTER_REGION} --project ${GCP_PROJECT_ID}
+                  """
+
+                  String brand = "lloyds"
+                  String releaseName = "${APP_NAME}-${brand}"
+
+                  // europe-docker.pkg.dev/mgmt-bak-bld-1dd7/main/vbp/chf/al00000/images/starterkit
+                  String baseRepository = "${REGISTRY_URL}/${VS_NAME}/${WS_NAME}/${CMDB_APPID}/images/${APP_NAME}".toLowerCase()
+                  String prSubdomain = "${env.GIT_BRANCH.toLowerCase().replaceAll("[/.]", "-")}"
+                  env.BDD_URL = "https://${prSubdomain}.${brand}.${ROOT_SUBDOMAIN}.vbp-bld.oncp.dev/${APP_NAME}"
+                  println "Deployed URL: ${BDD_URL}"
+
+                  def config = [
+                    chartName: "helm-chart",
+                    version: "1.0.0",
+                    namespace: "${GKE_NAMESPACE}",
+                    releaseName: "${releaseName}",
+                    options: " --force --set journeyName=${APP_NAME} --set image.baseRepository=${baseRepository} --set image.tag=${IMG_TAG} --set image.pullPolicy=Always --set ingress.rootSubdomain=${ROOT_SUBDOMAIN} --set ingress.prSubdomain=${prSubdomain} -f helm-overrides/${brand}.yaml",
+                    credentialsId: "jenkinsPAT",
+                    dryRun: true
+                  ]
+
+                  upgradeReleaseV3(config)
+                  statusReleaseV3(flags: "", releaseName: "${releaseName}", namespace: "${GKE_NAMESPACE}")
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    stage('Deploy to Akamai NetStorage') {
+      when { expression { params.NS_DEPLOYMENT } }
+      steps {
+        script {
+          Map confDeploy = [
+            appPath: env.WORKING_DIR,
+            appName: env.APP_NAME,
+            basePath: env.BASE_PATH
+          ]
+          deployToAkamai(confDeploy)
+          String buildSource = env.NS_DISTINCT_BUILD.toBoolean() ? env.GIT_BRANCH.toLowerCase().replace("-", "") + "b" + env.BUILD_NUMBER : env.GIT_BRANCH.toLowerCase().replace("-", "")
+          String appShortName = env.APP_NAME.toLowerCase().replace("-", "")
+          env.BDD_URL = "https://lloyds-${buildSource}-${appShortName}-${env.NS_BASE_DOMAIN}/${env.APP_NAME}"
+        }
+      }
+    }
+
+    // stage('BDD Tests') {
+    //   steps {
+    //     container('node-debian') {
+    //       script {
+    //         dir(env.WORKING_DIR) {
+    //           sh "BASE_URL=${env.BDD_URL}/ npm run bdd:ci"
+    //           archiveArtifacts artifacts: "tests/reports/**/*", allowEmptyArchive: true
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}

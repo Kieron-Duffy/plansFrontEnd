@@ -1,0 +1,141 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/d064ce4fb7f807b49027.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../assets/3179036f83d696847167.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'BoS Pill Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../assets/7a969edf2a3f4cbe6902.woff) format('woff');
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f2f6fa;
+  font-family: 'BoS Pill Gothic', system-ui, sans-serif;
+}
+
+.site-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 0px;
+  background-color: #05286a;
+}
+
+.header-container {
+  padding: 0px 1.5rem;
+  max-width: 78rem;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 0rem auto;
+  width: 100%;
+}
+
+.logo-item {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  width: 33.3333%;
+  box-sizing: border-box;
+  left: auto;
+  margin-left: 0%;
+  min-height: 0.0625rem;
+  padding-left: calc(0.75rem);
+  padding-right: calc(0.75rem);
+  position: relative;
+  right: auto;
+}
+
+.logo-svg {
+  height: 3.25rem;
+  width: 13.125rem;
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+}
+
+.site-footer {
+  position: relative;
+  background-color: #05286a;
+  margin-top: 0.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: auto;
+}
+
+.main {
+  padding: 0px 1.5rem;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 0rem auto;
+  width: 100%;
+  max-width: 78rem;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.text-div {
+  background-color: rgb(255, 255, 255);
+  margin: 0rem 0rem 1.5rem;
+  padding: 0.75rem;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.text-warning {
+  font-style: normal;
+  margin: 0rem 0rem 1.5rem;
+  padding: 0.75rem;
+  transition-duration: 0.1s;
+  transition-timing-function: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.16667;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  color: #05286a;
+}
+
+.text-message {
+  font-style: normal;
+  font-family: 'Avenir Next LT Pro', system-ui, sans-serif;
+  color: #333333;
+  margin: 0rem 0rem 1.5rem;
+  padding: 0.75rem;
+  transition-duration: 0.1s;
+  transition-timing-function: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}

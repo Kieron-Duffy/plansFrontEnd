@@ -1,0 +1,25 @@
+{
+  "Environments": {
+    "GCP": {
+      "Live": 2,
+      "Platforms": ["Client Data & Analytics", "Enterprise Risk"]
+    },
+    "FMO": {
+      "Live": 11,
+      "Platforms": [
+        "Consumer Finance x 4",
+        "Consumer Servicing & Engagement",
+        "Client Servicing & Engagement x 2",
+        "Everyday Banking x 4"
+      ]
+    },
+    "Azure": {
+      "Live": 5,
+      "Platforms": ["Homes x 3", "Client Servicing & Engagement x 2"]
+    },
+    "OCP": {
+      "Live": 0,
+      "Platforms": []
+    }
+  }
+}
