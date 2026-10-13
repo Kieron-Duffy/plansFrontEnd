@@ -4,6 +4,10 @@ import { Button } from '@constellation/core';
 import Footer from 'components/app/Footer';
 import HomeJourneyHeader from 'components/app/homeJourneyHeader';
 import RightBoxes from 'components/app/RightBoxes';
+import PlanProgressPanel from 'components/app/PlansProgressPanel';
+import ApiResultsBox from 'components/app/ApiResultsBox';
+
+import './homePage.css';
 
 const boxes = [
   {
@@ -34,18 +38,33 @@ const boxes = [
   },
 ];
 
+const apiResultsBoxes = [
+  {
+    id: 'internet-banking',
+    title: 'Internet Banking at your fingertips',
+    description: 'Managing your money ',
+  },
+  {
+    id: 'box-2',
+    title: 'Your second heading',
+    description: 'Your second box text.',
+  },
+
+];
+
 function HomePageBlank(): ReactElement {
   return (
     <>
-      <HomeJourneyHeader
-        title="One step closer to your new home"
-      />
+      <HomeJourneyHeader title="One step closer to your new home" />
 
-      <Button inverse>Apply now</Button>
+      <div className="boxes-row">
+        <ApiResultsBox boxes={apiResultsBoxes} />
+        <RightBoxes boxes={boxes} />
+      </div>
+      <PlanProgressPanel />
+      <Button>Apply now</Button>
 
-      <RightBoxes boxes={boxes} />
-
-      <Footer/>
+      <Footer />
     </>
   );
 }

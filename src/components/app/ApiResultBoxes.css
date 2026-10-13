@@ -1,0 +1,14 @@
+.apiResult-boxes-container {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.apiResult-boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
+}

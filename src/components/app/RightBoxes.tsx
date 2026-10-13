@@ -19,7 +19,7 @@ export default function RightBoxes({ boxes }: RightBoxesProps): ReactElement {
     <div className="right-boxes-container">
       <div className="right-boxes">
         {boxes.map(({ id, title, description }) => (
-          <Box key={id}>
+          <Box key={id} bgColor="brand1">
             <Heading as="h2">{title}</Heading>
             <Paragraph marginBottom="none">{description}</Paragraph>
           </Box>
