@@ -1,22 +1,35 @@
 import React, { ReactElement } from 'react';
+import { Heading, Paragraph, SummaryBox } from '@constellation/core';
 
-import { Box, Heading, Paragraph, SummaryBox } from '@constellation/core';
+import type { PlanProgress } from '../../api/plans';
 
 import './RightBoxes.css';
 
-interface RightBoxContent {
-  id: string;
-  title: string;
-  description: string;
-}
-
-interface RightBoxesProps {
-  boxes: RightBoxContent[];
+interface ApiResultsBoxProps {
+  progress: PlanProgress;
 }
 
 export default function ApiResultsBox({
-  boxes,
-}: RightBoxesProps): ReactElement {
+                                        progress,
+                                      }: ApiResultsBoxProps): ReactElement {
+  const boxes = [
+    {
+      id: 'completed',
+      title: 'Tasks completed',
+      description: `${progress.completedTasks} of ${progress.totalTasks}`,
+    },
+    {
+      id: 'remaining',
+      title: 'Tasks remaining',
+      description: `${progress.remainingTasks}`,
+    },
+    {
+      id: 'percentage',
+      title: 'Plan progress',
+      description: `${progress.completionPercentage}% complete`,
+    },
+  ];
+
   return (
     <div className="apiResult-boxes-container">
       <div className="apiResult-boxes">
@@ -25,6 +38,10 @@ export default function ApiResultsBox({
             <Heading as="h2">{title}</Heading>
             <Paragraph marginBottom="none">{description}</Paragraph>
           </SummaryBox>
+
+
+
+
         ))}
       </div>
     </div>
