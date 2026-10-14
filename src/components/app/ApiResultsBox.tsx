@@ -28,6 +28,15 @@ export default function ApiResultsBox({
       title: 'Plan progress',
       description: `${progress.completionPercentage}% complete`,
     },
+
+    {
+      id: 'next-task',
+      title: 'Next task',
+      description: progress.nextTask
+        ? `Type: ${progress.nextTask.typeCode}, 
+        Category: ${progress.nextTask.categoryTypeCode}`
+        : 'No next task available.',
+    },
   ];
 
   return (

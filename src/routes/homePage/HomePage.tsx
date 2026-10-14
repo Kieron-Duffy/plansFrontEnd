@@ -13,28 +13,28 @@ const boxes = [
   {
     id: 'internet-banking',
     title: 'Internet Banking at your fingertips',
-    description:
-      'Managing your money ',
+    description: 'Managing your money ',
   },
   {
     id: 'box-2',
-    title: 'Your second heading',
-    description: 'Your second box text.',
+    title: 'Your Plan Adapts to You',
+    description:
+      'As your plan progresses, the tasks you need to complete will change.',
   },
   {
     id: 'box-3',
-    title: 'Your third heading',
-    description: 'Your third box text.',
+    title: 'We track your progress',
+    description: 'We will clearly communicate your progress and what you need to do next.',
   },
   {
     id: 'box-4',
-    title: 'Your fourth heading',
-    description: 'Your fourth box text.',
+    title: 'Plans change as you get closer to your goal',
+    description: 'We have tailored plans based on your progress',
   },
   {
     id: 'box-5',
-    title: 'Your fifth heading',
-    description: 'Your fifth box text.',
+    title: 'Detailed information about your plan',
+    description: 'Each task has detailed information to help you complete it successfully.',
   },
 ];
 
@@ -87,7 +87,7 @@ function HomePageBlank(): ReactElement {
         <RightBoxes boxes={boxes} />
       </div>
 
-      <Button>Apply now</Button>
+      <Button>Retrieve Your Plan</Button>
       <Footer />
     </>
   );
