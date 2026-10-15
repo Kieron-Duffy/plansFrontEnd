@@ -1,5 +1,12 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import { Button, Paragraph } from '@constellation/core';
+import {
+  Accordion,
+  Button,
+  ContentGroup,
+  List,
+  ListItem,
+  Paragraph,
+} from '@constellation/core';
 import Footer from 'components/app/Footer';
 import HomeJourneyHeader from 'components/app/homeJourneyHeader';
 import RightBoxes from 'components/app/RightBoxes';
@@ -7,14 +14,10 @@ import { getFtbPlanId, getPlanProgress } from '../../api/plans';
 import type { PlanProgress } from '../../api/plans';
 import ApiResultsBox from 'components/app/ApiResultsBox';
 
-import './homePage.css';
+import './getPlanProgress.css';
 
 const boxes = [
-  {
-    id: 'internet-banking',
-    title: 'Internet Banking at your fingertips',
-    description: 'Managing your money ',
-  },
+
   {
     id: 'box-2',
     title: 'Your Plan Adapts to You',
@@ -31,11 +34,7 @@ const boxes = [
     title: 'Plans change as you get closer to your goal',
     description: 'We have tailored plans based on your progress',
   },
-  {
-    id: 'box-5',
-    title: 'Detailed information about your plan',
-    description: 'Each task has detailed information to help you complete it successfully.',
-  },
+
 ];
 
 function HomePageBlank(): ReactElement {

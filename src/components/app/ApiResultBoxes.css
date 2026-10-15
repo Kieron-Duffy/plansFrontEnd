@@ -1,16 +1,14 @@
 .apiResult-boxes-container {
-    display: flex;
-    justify-content: flex-start;
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
     box-sizing: border-box;
-    text-align: center;
 }
 
 .apiResult-boxes {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 16px;
     width: 100%;
-    max-width: 400px;
-    min-width: 0;
-
+    overflow-wrap: anywhere;
 }

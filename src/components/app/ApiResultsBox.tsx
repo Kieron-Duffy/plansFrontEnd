@@ -4,6 +4,7 @@ import { Heading, Paragraph, SummaryBox } from '@constellation/core';
 import type { PlanProgress } from '../../api/plans';
 
 import './RightBoxes.css';
+import { getTaskContent } from 'content/task';
 
 interface ApiResultsBoxProps {
   progress: PlanProgress;
@@ -12,7 +13,22 @@ interface ApiResultsBoxProps {
 export default function ApiResultsBox({
                                         progress,
                                       }: ApiResultsBoxProps): ReactElement {
+
+  const nextTaskContent = progress.nextTask
+    ? getTaskContent(progress.nextTask.categoryTypeCode)
+    : undefined;
+
   const boxes = [
+    {
+      id: 'next-task',
+      title: nextTaskContent
+        ? `Next task: ${nextTaskContent.title}`
+        : 'Next task',
+      description: progress.nextTask
+        ? (nextTaskContent?.description ??
+          'Guidance for this task category is not yet available.')
+        : 'No next task available.',
+    },
     {
       id: 'completed',
       title: 'Tasks completed',
@@ -27,15 +43,6 @@ export default function ApiResultsBox({
       id: 'percentage',
       title: 'Plan progress',
       description: `${progress.completionPercentage}% complete`,
-    },
-
-    {
-      id: 'next-task',
-      title: 'Next task',
-      description: progress.nextTask
-        ? `Type: ${progress.nextTask.typeCode}, 
-        Category: ${progress.nextTask.categoryTypeCode}`
-        : 'No next task available.',
     },
   ];
 
