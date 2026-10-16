@@ -1,0 +1,22 @@
+.boxes-row > .apiResult-boxes-container {
+    flex: 2 1 400px;
+    max-width: 800px;
+    min-width: 0;
+}
+
+.boxes-row > .right-boxes-container {
+    flex: 1 1 280px;
+    max-width: 250px;
+    min-width: 0;
+}
+
+
+.boxes-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+}
+

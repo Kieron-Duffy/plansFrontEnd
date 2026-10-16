@@ -70,7 +70,12 @@ export default function HeaderComponent(
                   {homeLink}
                 </StyledLink>
 
+                <StyledLink $brand={brand} to={routes.GetPlanProgress}>
+                  Plan Progress
+                </StyledLink>
               </StyledNavLinks>
+
+
             </GridItem>
           </Grid>
         </Container>

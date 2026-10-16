@@ -1,6 +1,5 @@
 .right-boxes-container {
-    display: flex;
-    justify-content: flex-end;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -9,6 +8,5 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
-    max-width: 400px;
-    min-width: 0;
+    overflow-wrap: anywhere;
 }
