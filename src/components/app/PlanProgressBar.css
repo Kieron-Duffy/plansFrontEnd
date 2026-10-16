@@ -1,0 +1,11 @@
+.plan-progress {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.plan-progress-bar {
+    accent-color: currentColor;
+    height: 30px;
+}

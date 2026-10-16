@@ -5,6 +5,7 @@ import type { PlanProgress } from '../../api/plans';
 
 import './RightBoxes.css';
 import { getTaskContent } from 'content/task';
+import PlanProgressBar from 'components/app/PlanProgressBar';
 
 interface ApiResultsBoxProps {
   progress: PlanProgress | null;
@@ -62,17 +63,7 @@ export default function ApiResultsBox({
           <SummaryBox key={id} variation="secondary">
             <Heading as="h2">{title}</Heading>
             {id === 'percentage' && progress ? (
-              <div className="apiResult-progress">
-                <Paragraph marginBottom="none">{description}</Paragraph>
-                <progress
-                  className="apiResult-progress-bar"
-                  value={progress.completionPercentage}
-                  max={100}
-                  aria-label="Plan completion"
-                >
-                  {progress.completionPercentage}%
-                </progress>
-              </div>
+              <PlanProgressBar percentage={progress.completionPercentage} />
             ) : (
               <Paragraph marginBottom="none">{description}</Paragraph>
             )}

@@ -1,7 +1,5 @@
 .apiResult-boxes-container {
     width: 100%;
-    max-width: 400px;
-    min-width: 0;
     box-sizing: border-box;
 }
 
@@ -12,3 +10,4 @@
     width: 100%;
     overflow-wrap: anywhere;
 }
+
