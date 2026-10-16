@@ -22,6 +22,27 @@ export interface PlanProgress {
   nextTask: NextTask | null;
 }
 
+export type FtbCohort = 'ASPIRATIONAL' | 'PROSPECTIVE' | 'CUSP';
+
+// Only the response fields currently needed by the UI.
+export interface CreateFtbPlanResponse {
+  partyConfig: {
+    ftbCohort: FtbCohort;
+  };
+  plan: {
+    id: string;
+    name: string;
+  };
+}
+
+export const createFtbPlan = (
+  cohort: FtbCohort,
+): Promise<CreateFtbPlanResponse> =>
+  apiFetch<CreateFtbPlanResponse>(`${PLANS_PATH}/ftb`, {
+    method: 'POST',
+    body: JSON.stringify({ cohort }),
+  });
+
 export const getFtbPlanId = async (): Promise<string> => {
   const res = await apiFetch<PlanIdResponse>(`${PLANS_PATH}/type/ftb`);
   return res.plan.id;

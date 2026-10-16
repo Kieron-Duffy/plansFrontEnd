@@ -101,8 +101,8 @@ function HomePageBlank(): ReactElement {
         <div className="apiResult-boxes-container">
           {error && (
             <Paragraph role="alert">
-          You don't currently have an active plan.
-             You can create one on our home page.
+              You don't currently have an active plan. You can create one on our
+              home page.
             </Paragraph>
           )}
           <ApiResultsBox progress={progress} />
@@ -119,7 +119,9 @@ function HomePageBlank(): ReactElement {
       >
         {isLoading ? 'Retrieving your plan...' : 'Retrieve Your Plan'}
       </Button>
-      <Footer />
+      <div className="home-page-footer">
+        <Footer />
+      </div>
     </>
   );
 }
