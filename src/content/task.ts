@@ -6,16 +6,40 @@ interface TaskContent {
 
 export const tasks: TaskContent[] = [
   {
-    category: 'UNDERSTAND_BUDGET',
-    title: 'Understand your budget',
+    category: 'FIRST_HOME_COST',
+    title: 'Understand the costs of buying your first home',
     description:
-      'Start by comparing your monthly take-home income with your regular spending, including bills, food, travel and any debt repayments. Allow for occasional expenses and keep some money aside for unexpected costs. This can help you work out how much you could comfortably save towards your first home each month.',
+      'Explore the costs involved in buying your first home, from your deposit and mortgage fees to legal fees, surveys and moving costs. Budgeting for these early can help you understand how much you need to save.',
   },
   {
-    category: 'SAVE_FOR_DEPOSIT',
-    title: 'Save for a deposit',
+    category: 'STAMP_DUTY',
+    title: 'Check your property tax costs',
     description:
-      'You will typically need a deposit of at least 5% to 10% of the property price, depending on the mortgage and your circumstances. For a £200,000 home, that would be £10,000 to £20,000. A larger deposit may give you access to more mortgage options. Remember to budget separately for legal fees, moving costs and any property taxes that apply.',
+      'Find out whether you will need to pay tax when buying your home. The amount depends on the property price, where in the UK you are buying and your circumstances. Check whether you qualify for first-time buyer relief.',
+  },
+  {
+    category: 'CREATE_DEPOSIT_GOAL',
+    title: 'Set your deposit savings goal',
+    description:
+      'Set a deposit target based on the price of the home you would like to buy. Review what you have already saved and work out how much you could put aside each month, keeping other home-buying costs separate.',
+  },
+  {
+    category: 'SPENDING_INSIGHTS',
+    title: 'Review your spending',
+    description:
+      'Take a look at your regular spending to understand where your money goes. Reviewing bills, subscriptions and everyday purchases can help you identify opportunities to save towards your first home.',
+  },
+  {
+    category: 'PROTECTION_NEEDS_FINDER',
+    title: 'Explore your protection needs',
+    description:
+      'Consider how you would cover your mortgage and essential bills if your circumstances changed. Explore whether life insurance, critical illness cover or income protection could help meet your needs.',
+  },
+  {
+    category: 'GIFTED_DEPOSITS',
+    title: 'Understand gifted deposits',
+    description:
+      'Learn how money gifted by family or others could contribute towards your deposit. Lenders may have different requirements, including evidence of where the money came from and confirmation that it does not need to be repaid.',
   },
 ];
 

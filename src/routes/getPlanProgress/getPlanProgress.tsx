@@ -40,6 +40,29 @@ const boxes = [
 function HomePageBlank(): ReactElement {
   const [progress, setProgress] = useState<PlanProgress | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function handleRetrievePlan(): Promise<void> {
+    if (isLoading) return;
+
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const planId = await getFtbPlanId();
+      const response = await getPlanProgress(planId);
+
+      setProgress(response);
+    } catch (error: unknown) {
+      setError(
+        error instanceof Error
+          ? error.message
+          : 'Unable to load plan progress.',
+      );
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   useEffect(() => {
     let active = true;
@@ -75,18 +98,27 @@ function HomePageBlank(): ReactElement {
       <HomeJourneyHeader title="One step closer to your new home" />
 
       <div className="boxes-row">
-        {error ? (
-          <Paragraph>Error: {error}</Paragraph>
-        ) : progress ? (
+        <div className="apiResult-boxes-container">
+          {error && (
+            <Paragraph role="alert">
+          You don't currently have an active plan.
+             You can create one on our home page.
+            </Paragraph>
+          )}
           <ApiResultsBox progress={progress} />
-        ) : (
-          <Paragraph>Loading...</Paragraph>
-        )}
+        </div>
 
         <RightBoxes boxes={boxes} />
       </div>
 
-      <Button>Retrieve Your Plan</Button>
+      <Button
+        onClick={() => {
+          void handleRetrievePlan();
+        }}
+        disabled={isLoading}
+      >
+        {isLoading ? 'Retrieving your plan...' : 'Retrieve Your Plan'}
+      </Button>
       <Footer />
     </>
   );

@@ -12,3 +12,16 @@
     width: 100%;
     overflow-wrap: anywhere;
 }
+
+.apiResult-progress {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.apiResult-progress-bar {
+
+    accent-color: currentColor;
+    height: 30px;
+}

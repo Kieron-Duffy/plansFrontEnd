@@ -7,15 +7,14 @@ import './RightBoxes.css';
 import { getTaskContent } from 'content/task';
 
 interface ApiResultsBoxProps {
-  progress: PlanProgress;
+  progress: PlanProgress | null;
 }
 
 export default function ApiResultsBox({
-                                        progress,
-                                      }: ApiResultsBoxProps): ReactElement {
-
-  const nextTaskContent = progress.nextTask
-    ? getTaskContent(progress.nextTask.categoryTypeCode)
+  progress,
+}: ApiResultsBoxProps): ReactElement {
+  const nextTaskContent = progress?.nextTask
+    ? getTaskContent(progress.nextTask.typeCode)
     : undefined;
 
   const boxes = [
@@ -24,27 +23,37 @@ export default function ApiResultsBox({
       title: nextTaskContent
         ? `Next task: ${nextTaskContent.title}`
         : 'Next task',
-      description: progress.nextTask
-        ? (nextTaskContent?.description ??
-          'Guidance for this task category is not yet available.')
-        : 'No next task available.',
+      description: !progress
+        ? 'Your next task will appear here when your plan is available.'
+        : progress.nextTask
+          ? (nextTaskContent?.description ??
+            'Guidance for this task category is not yet available.')
+          : 'No next task available.',
     },
     {
       id: 'completed',
       title: 'Tasks completed',
-      description: `${progress.completedTasks} of ${progress.totalTasks}`,
+      description: progress
+        ? `${progress.completedTasks} of ${progress.totalTasks}`
+        : 'Your completed tasks will appear here.',
     },
     {
       id: 'remaining',
       title: 'Tasks remaining',
-      description: `${progress.remainingTasks}`,
+      description: progress
+        ? `${progress.remainingTasks}`
+        : 'Your remaining tasks will appear here.',
     },
     {
       id: 'percentage',
       title: 'Plan progress',
-      description: `${progress.completionPercentage}% complete`,
+      description: progress
+        ? `${progress.completionPercentage}% complete`
+        : 'Your progress will appear here.',
     },
   ];
+
+
 
   return (
     <div className="apiResult-boxes-container">
@@ -52,12 +61,22 @@ export default function ApiResultsBox({
         {boxes.map(({ id, title, description }) => (
           <SummaryBox key={id} variation="secondary">
             <Heading as="h2">{title}</Heading>
-            <Paragraph marginBottom="none">{description}</Paragraph>
+            {id === 'percentage' && progress ? (
+              <div className="apiResult-progress">
+                <Paragraph marginBottom="none">{description}</Paragraph>
+                <progress
+                  className="apiResult-progress-bar"
+                  value={progress.completionPercentage}
+                  max={100}
+                  aria-label="Plan completion"
+                >
+                  {progress.completionPercentage}%
+                </progress>
+              </div>
+            ) : (
+              <Paragraph marginBottom="none">{description}</Paragraph>
+            )}
           </SummaryBox>
-
-
-
-
         ))}
       </div>
     </div>
