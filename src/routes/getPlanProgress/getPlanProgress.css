@@ -20,3 +20,9 @@
     width: 100%;
 }
 
+.plan-progress-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+

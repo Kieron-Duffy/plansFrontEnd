@@ -52,3 +52,9 @@ export const getPlanProgress = (planId: string) =>
   apiFetch<PlanProgress>(
     `${PLANS_PATH}/${encodeURIComponent(planId)}/progress`,
   );
+
+export const completePlanTask = (taskId: string): Promise<void> =>
+  apiFetch<void>(`${PLANS_PATH}/task/${encodeURIComponent(taskId)}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ state: 'COMPLETED' }),
+  });

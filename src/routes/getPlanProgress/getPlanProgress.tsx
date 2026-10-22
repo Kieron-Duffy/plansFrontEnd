@@ -15,6 +15,7 @@ import type { PlanProgress } from '../../api/plans';
 import ApiResultsBox from 'components/app/ApiResultsBox';
 
 import './getPlanProgress.css';
+import CompleteTaskButton from 'components/app/CompleteTaskButton';
 
 const boxes = [
 
@@ -111,14 +112,20 @@ function HomePageBlank(): ReactElement {
         <RightBoxes boxes={boxes} />
       </div>
 
-      <Button
-        onClick={() => {
-          void handleRetrievePlan();
-        }}
-        disabled={isLoading}
-      >
-        {isLoading ? 'Retrieving your plan...' : 'Retrieve Your Plan'}
-      </Button>
+      <div className="plan-progress-actions">
+        <Button onClick={() => void handleRetrievePlan()} disabled={isLoading}>
+          {isLoading ? 'Retrieving your plan...' : 'Retrieve Your Plan'}
+        </Button>
+
+        {progress?.nextTask && (
+          <CompleteTaskButton
+            taskId={progress.nextTask.taskId}
+            onCompleted={() => void handleRetrievePlan()}
+            disabled={isLoading}
+          />
+        )}
+      </div>
+
       <div className="home-page-footer">
         <Footer />
       </div>
