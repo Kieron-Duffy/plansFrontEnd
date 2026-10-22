@@ -58,3 +58,16 @@ export const completePlanTask = (taskId: string): Promise<void> =>
     method: 'PATCH',
     body: JSON.stringify({ state: 'COMPLETED' }),
   });
+
+export interface DeleteFtbPlanResponse {
+  state: 'DELETED';
+}
+
+export const deleteFtbPlan = (planId: string): Promise<DeleteFtbPlanResponse> =>
+  apiFetch<DeleteFtbPlanResponse>(
+    `${PLANS_PATH}/${encodeURIComponent(planId)}`,
+    {
+      method: 'PATCH',
+      body: JSON.stringify({ state: 'DELETED' }),
+    },
+  );
