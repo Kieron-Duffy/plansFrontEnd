@@ -67,6 +67,8 @@
     "@constellation/storybook": "4.0.0",
     "@interstellar/eslint-config-clean-code": "6.51.2",
     "@interstellar/mockserver": "6.51.2",
+    "@interstellar/nga-bridge": "6.51.2",
+    "@interstellar/nga-bridge-react": "6.51.2",
     "@interstellar/react-app": "6.51.2",
     "@interstellar/typescript-config-react": "6.51.2",
     "@testing-library/jest-dom": "7.0.1",
@@ -78,6 +80,7 @@
     "@types/react-dom": "19.2.4",
     "cpy-cli": "5.0.0",
     "jest": "30.4.2",
+    "jest-cucumber": "^4.5.0",
     "jest-html-reporters": "3.1.7",
     "jiti": "2.7.0",
     "lint-staged": "15.5.1",
@@ -85,9 +88,7 @@
     "nodemon": "3.1.14",
     "prettier": "3.9.6",
     "typescript": "6.0.3",
-    "webpack-cli": "5.1.4",
-    "@interstellar/nga-bridge": "6.51.2",
-    "@interstellar/nga-bridge-react": "6.51.2"
+    "webpack-cli": "5.1.4"
   },
   "interstellar": {
     "journeyName": "journey-name"

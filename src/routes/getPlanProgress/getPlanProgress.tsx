@@ -139,12 +139,6 @@ function HomePageBlank(): ReactElement {
       </div>
 
       <div className="plan-progress-actions">
-        <Button
-          onClick={() => void handleRetrievePlan()}
-          disabled={isLoading || isDeleting || planDeleted}
-        >
-          {isLoading ? 'Retrieving your plan...' : 'Retrieve Your Plan'}
-        </Button>
 
         {progress?.nextTask && (
           <CompleteTaskButton
