@@ -12,10 +12,11 @@ jest.mock('@interstellar/react-app-content', () => ({
 }));
 
 describe('Page', () => {
-  it('renders Lloyds Home Page with Hello Text', () => {
+  it('renders the home buying plan form', () => {
     renderWithTheme(<Page />, { BRAND_NAME: Brand.LLOYDS });
 
-    const text = screen.getByText('Hello Lloyds');
-    expect(text).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: "Let's put a plan into action" }),
+    ).toBeInTheDocument();
   });
 });

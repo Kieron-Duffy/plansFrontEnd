@@ -22,6 +22,27 @@ export interface PlanProgress {
   nextTask: NextTask | null;
 }
 
+export type FtbCohort = 'ASPIRATIONAL' | 'PROSPECTIVE' | 'CUSP';
+
+// Only the response fields currently needed by the UI.
+export interface CreateFtbPlanResponse {
+  partyConfig: {
+    ftbCohort: FtbCohort;
+  };
+  plan: {
+    id: string;
+    name: string;
+  };
+}
+
+export const createFtbPlan = (
+  cohort: FtbCohort,
+): Promise<CreateFtbPlanResponse> =>
+  apiFetch<CreateFtbPlanResponse>(`${PLANS_PATH}/ftb`, {
+    method: 'POST',
+    body: JSON.stringify({ cohort }),
+  });
+
 export const getFtbPlanId = async (): Promise<string> => {
   const res = await apiFetch<PlanIdResponse>(`${PLANS_PATH}/type/ftb`);
   return res.plan.id;
@@ -30,4 +51,23 @@ export const getFtbPlanId = async (): Promise<string> => {
 export const getPlanProgress = (planId: string) =>
   apiFetch<PlanProgress>(
     `${PLANS_PATH}/${encodeURIComponent(planId)}/progress`,
+  );
+
+export const completePlanTask = (taskId: string): Promise<void> =>
+  apiFetch<void>(`${PLANS_PATH}/task/${encodeURIComponent(taskId)}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ state: 'COMPLETED' }),
+  });
+
+export interface DeleteFtbPlanResponse {
+  state: 'DELETED';
+}
+
+export const deleteFtbPlan = (planId: string): Promise<DeleteFtbPlanResponse> =>
+  apiFetch<DeleteFtbPlanResponse>(
+    `${PLANS_PATH}/${encodeURIComponent(planId)}`,
+    {
+      method: 'PATCH',
+      body: JSON.stringify({ state: 'DELETED' }),
+    },
   );

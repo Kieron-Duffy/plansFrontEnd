@@ -1,23 +1,16 @@
-import React, { ReactElement, useEffect, useState } from 'react';
-import {
-  Accordion,
-  Button,
-  ContentGroup,
-  List,
-  ListItem,
-  Paragraph,
-} from '@constellation/core';
+import React, { ReactElement, useEffect, useRef, useState } from 'react';
+import { Button, Paragraph } from '@constellation/core';
 import Footer from 'components/app/Footer';
 import HomeJourneyHeader from 'components/app/homeJourneyHeader';
 import RightBoxes from 'components/app/RightBoxes';
-import { getFtbPlanId, getPlanProgress } from '../../api/plans';
+import { deleteFtbPlan, getFtbPlanId, getPlanProgress } from '../../api/plans';
 import type { PlanProgress } from '../../api/plans';
 import ApiResultsBox from 'components/app/ApiResultsBox';
+import CompleteTaskButton from 'components/app/CompleteTaskButton';
 
 import './getPlanProgress.css';
 
 const boxes = [
-
   {
     id: 'box-2',
     title: 'Your Plan Adapts to You',
@@ -27,23 +20,27 @@ const boxes = [
   {
     id: 'box-3',
     title: 'We track your progress',
-    description: 'We will clearly communicate your progress and what you need to do next.',
+    description:
+      'We will clearly communicate your progress and what you need to do next.',
   },
   {
     id: 'box-4',
     title: 'Plans change as you get closer to your goal',
     description: 'We have tailored plans based on your progress',
   },
-
 ];
 
 function HomePageBlank(): ReactElement {
   const [progress, setProgress] = useState<PlanProgress | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [planDeleted, setPlanDeleted] = useState(false);
+  const deletionInFlight = useRef(false);
 
   async function handleRetrievePlan(): Promise<void> {
-    if (isLoading) return;
+    if (isLoading || isDeleting) return;
 
     setIsLoading(true);
     setError(null);
@@ -51,7 +48,6 @@ function HomePageBlank(): ReactElement {
     try {
       const planId = await getFtbPlanId();
       const response = await getPlanProgress(planId);
-
       setProgress(response);
     } catch (error: unknown) {
       setError(
@@ -61,6 +57,30 @@ function HomePageBlank(): ReactElement {
       );
     } finally {
       setIsLoading(false);
+    }
+  }
+
+  async function handleDeletePlan(): Promise<void> {
+    if (!progress || deletionInFlight.current) return;
+
+    deletionInFlight.current = true;
+    setIsDeleting(true);
+    setDeleteError(null);
+
+    try {
+      await deleteFtbPlan(progress.planId);
+      setProgress(null);
+      setPlanDeleted(true);
+      setError(null);
+    } catch (error: unknown) {
+      setDeleteError(
+        error instanceof Error
+          ? `Unable to delete your plan: ${error.message}`
+          : 'Unable to delete your plan. Please try again.',
+      );
+    } finally {
+      deletionInFlight.current = false;
+      setIsDeleting(false);
     }
   }
 
@@ -101,8 +121,15 @@ function HomePageBlank(): ReactElement {
         <div className="apiResult-boxes-container">
           {error && (
             <Paragraph role="alert">
-          You don't currently have an active plan.
-             You can create one on our home page.
+              You don't currently have an active plan. You can create one on our
+              home page.
+            </Paragraph>
+          )}
+          {deleteError && <Paragraph role="alert">{deleteError}</Paragraph>}
+          {planDeleted && (
+            <Paragraph role="status">
+              Your plan has been deleted. You can create a new one from the home
+              page.
             </Paragraph>
           )}
           <ApiResultsBox progress={progress} />
@@ -111,15 +138,29 @@ function HomePageBlank(): ReactElement {
         <RightBoxes boxes={boxes} />
       </div>
 
-      <Button
-        onClick={() => {
-          void handleRetrievePlan();
-        }}
-        disabled={isLoading}
-      >
-        {isLoading ? 'Retrieving your plan...' : 'Retrieve Your Plan'}
-      </Button>
-      <Footer />
+      <div className="plan-progress-actions">
+
+        {progress?.nextTask && (
+          <CompleteTaskButton
+            taskId={progress.nextTask.taskId}
+            onCompleted={() => void handleRetrievePlan()}
+            disabled={isLoading || isDeleting}
+          />
+        )}
+
+        {progress && (
+          <Button
+            onClick={() => void handleDeletePlan()}
+            disabled={isLoading || isDeleting}
+          >
+            {isDeleting ? 'Deleting your plan...' : 'Delete plan'}
+          </Button>
+        )}
+      </div>
+
+      <div className="home-page-footer">
+        <Footer />
+      </div>
     </>
   );
 }
