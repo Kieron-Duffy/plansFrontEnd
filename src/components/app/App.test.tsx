@@ -39,9 +39,9 @@ describe('App', () => {
       { BRAND_NAME: Brand.LLOYDS },
     );
 
-    const text = screen.getByText(
-'Hello Lloyds'
-    );
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 
@@ -54,7 +54,9 @@ describe('App', () => {
       { BRAND_NAME: Brand.HALIFAX },
     );
 
-    const text = screen.getByText('Hello Lloyds');
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 
@@ -79,9 +81,9 @@ describe('App', () => {
       { BRAND_NAME: Brand.MBNA },
     );
 
-    const text = screen.getByText(
-'Hello Lloyds'
-    );
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 
@@ -95,9 +97,9 @@ describe('App', () => {
       { BRAND_NAME: Brand.BOS },
     );
 
-    const text = screen.getByText(
-'Hello Lloyds'
-    );
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 
@@ -111,9 +113,9 @@ describe('App', () => {
       { BRAND_NAME: Brand.SCOTTISH_WIDOWS },
     );
 
-    const text = screen.getByText(
-'Hello Lloyds'
-    );
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 
@@ -127,9 +129,9 @@ describe('App', () => {
       { BRAND_NAME: Brand.BIRMINGHAM_MIDSHIRES },
     );
 
-    const text = screen.getByText(
-'Hello Lloyds'
-    );
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 
@@ -143,9 +145,9 @@ describe('App', () => {
       { BRAND_NAME: Brand.BLACK_HORSE },
     );
 
-    const text = screen.getByText(
-'Hello Lloyds'
-    );
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 
@@ -157,9 +159,9 @@ describe('App', () => {
       { BRAND_NAME: undefined },
     );
 
-    const text = screen.getByText(
-'Hello Lloyds'
-    );
+    const text = screen.getByRole('heading', {
+      name: "Let's put a plan into action",
+    });
     expect(text).toBeInTheDocument();
   });
 });

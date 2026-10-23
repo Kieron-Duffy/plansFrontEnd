@@ -78,6 +78,21 @@ exports[`App renders BOS blank template 1`] = `
                           </span>
                         </span>
                       </a>
+                      <a
+                        class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf sc-bdDsiv czeKQS"
+                        data-discover="true"
+                        href="/get-plan-progress"
+                      >
+                        <span
+                          class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                        >
+                          <span
+                            class="csl-link__children"
+                          >
+                            Plan Progress
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -87,12 +102,226 @@ exports[`App renders BOS blank template 1`] = `
           <main
             class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
           >
-            <span
-              class="csl-typography csl-heading-s4 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s4__11j2ameq typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s4__11j2ame23 typography_sizeStylesByVariation_heading_s4__11j2ame37 typography_weightStylesByVariationAndSize_heading_s4_default__11j2ame51 sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
-              role="heading"
+            <div
+              class="csl-journey-header journeyHeader_journeyHeader__1b2hjfh0"
             >
-               Hello Lloyds 
-            </span>
+              <h1
+                class="csl-typography csl-heading-s7 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s7__11j2amet typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s7__11j2ame26 typography_sizeStylesByVariation_heading_s7__11j2ame3a typography_weightStylesByVariationAndSize_heading_s7_default__11j2ame5a sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
+              >
+                Let's put a plan into action
+              </h1>
+            </div>
+            <div
+              class="home-page-content"
+            >
+              <div
+                class="home-page-hero-container"
+              >
+                <img
+                  alt=""
+                  src="/door-mobile-hero-ftb.jpg"
+                />
+              </div>
+              <form
+                aria-busy="false"
+                class="home-page-options"
+              >
+                <fieldset
+                  aria-describedby="cohort-hint cohort-error"
+                  class="csl-field sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_07_xs__o77fkn7i sprinkles_marginLeft_none_xs__o77fkn8i labeledField_labeledField__10j5v5j0"
+                >
+                  <legend
+                    class="csl-field-label fieldLabel_fieldLabel__1au2tb0"
+                    data-csl-selector="field-label"
+                  >
+                    <span
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                    >
+                      Where are you on your home buying journey?
+                    </span>
+                  </legend>
+                  <div
+                    id="cohort-hint"
+                  />
+                  <div
+                    id="cohort-error"
+                  />
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-aspirational"
+                      name="cohort"
+                      type="radio"
+                      value="ASPIRATIONAL"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-aspirational"
+                    >
+                      I'm Aspiring to be a First Time Buyer
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-prospective"
+                      name="cohort"
+                      type="radio"
+                      value="PROSPECTIVE"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-prospective"
+                    >
+                      I have saved some money and want to buy a home
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container csl-radio-button-group__item-last radioButtonGroup_lastItem__b3ib5q0"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-cusp"
+                      name="cohort"
+                      type="radio"
+                      value="CUSP"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-cusp"
+                    >
+                      I have a deposit and have a lot of knowledge about buying a home
+                    </label>
+                  </div>
+                </fieldset>
+                <button
+                  class="csl-button button__1q99b4cd button_buttonBase__1q99b4c0 button_buttonRecipe_variation_primary__1q99b4ce button_buttonRecipe_inverse_true__1q99b4cg button_buttonRecipe_accent_false__1q99b4cj button_widthVariants_content__1q99b4c2 button_primaryInverse__1q99b4c5 csl-button--primary sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  type="submit"
+                >
+                  <span
+                    class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  >
+                    Create plan
+                  </span>
+                </button>
+              </form>
+            </div>
+            <div
+              class="home-page-footer"
+            >
+              <footer
+                class="csl-footer footer_footer__2vv4dn0 footer_marginTop_06__2vv4dn8"
+              >
+                <div
+                  class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
+                >
+                  <div
+                    style="display: contents;"
+                  >
+                    <div
+                      class="footer_footerWrapper__2vv4dnc"
+                    >
+                      <div
+                        class="csl-footer__wrapper footer_footerLinkWrapper__2vv4dnd"
+                        role="list"
+                      >
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Security
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Cookies
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Privacy
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Rates & Charges
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
           </main>
           <footer
             class="csl-footer footer_footer__2vv4dn0 footer_marginTop_03__2vv4dn5"
@@ -233,6 +462,21 @@ exports[`App renders Birmingham Midshires blank template 1`] = `
                           </span>
                         </span>
                       </a>
+                      <a
+                        class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf sc-bdDsiv czeKQS"
+                        data-discover="true"
+                        href="/get-plan-progress"
+                      >
+                        <span
+                          class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                        >
+                          <span
+                            class="csl-link__children"
+                          >
+                            Plan Progress
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -242,12 +486,226 @@ exports[`App renders Birmingham Midshires blank template 1`] = `
           <main
             class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
           >
-            <span
-              class="csl-typography csl-heading-s4 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s4__11j2ameq typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s4__11j2ame23 typography_sizeStylesByVariation_heading_s4__11j2ame37 typography_weightStylesByVariationAndSize_heading_s4_default__11j2ame51 sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
-              role="heading"
+            <div
+              class="csl-journey-header journeyHeader_journeyHeader__1b2hjfh0"
             >
-               Hello Lloyds 
-            </span>
+              <h1
+                class="csl-typography csl-heading-s7 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s7__11j2amet typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s7__11j2ame26 typography_sizeStylesByVariation_heading_s7__11j2ame3a typography_weightStylesByVariationAndSize_heading_s7_default__11j2ame5a sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
+              >
+                Let's put a plan into action
+              </h1>
+            </div>
+            <div
+              class="home-page-content"
+            >
+              <div
+                class="home-page-hero-container"
+              >
+                <img
+                  alt=""
+                  src="/door-mobile-hero-ftb.jpg"
+                />
+              </div>
+              <form
+                aria-busy="false"
+                class="home-page-options"
+              >
+                <fieldset
+                  aria-describedby="cohort-hint cohort-error"
+                  class="csl-field sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_07_xs__o77fkn7i sprinkles_marginLeft_none_xs__o77fkn8i labeledField_labeledField__10j5v5j0"
+                >
+                  <legend
+                    class="csl-field-label fieldLabel_fieldLabel__1au2tb0"
+                    data-csl-selector="field-label"
+                  >
+                    <span
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                    >
+                      Where are you on your home buying journey?
+                    </span>
+                  </legend>
+                  <div
+                    id="cohort-hint"
+                  />
+                  <div
+                    id="cohort-error"
+                  />
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-aspirational"
+                      name="cohort"
+                      type="radio"
+                      value="ASPIRATIONAL"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-aspirational"
+                    >
+                      I'm Aspiring to be a First Time Buyer
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-prospective"
+                      name="cohort"
+                      type="radio"
+                      value="PROSPECTIVE"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-prospective"
+                    >
+                      I have saved some money and want to buy a home
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container csl-radio-button-group__item-last radioButtonGroup_lastItem__b3ib5q0"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-cusp"
+                      name="cohort"
+                      type="radio"
+                      value="CUSP"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-cusp"
+                    >
+                      I have a deposit and have a lot of knowledge about buying a home
+                    </label>
+                  </div>
+                </fieldset>
+                <button
+                  class="csl-button button__1q99b4cd button_buttonBase__1q99b4c0 button_buttonRecipe_variation_primary__1q99b4ce button_buttonRecipe_inverse_true__1q99b4cg button_buttonRecipe_accent_false__1q99b4cj button_widthVariants_content__1q99b4c2 button_primaryInverse__1q99b4c5 csl-button--primary sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  type="submit"
+                >
+                  <span
+                    class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  >
+                    Create plan
+                  </span>
+                </button>
+              </form>
+            </div>
+            <div
+              class="home-page-footer"
+            >
+              <footer
+                class="csl-footer footer_footer__2vv4dn0 footer_marginTop_06__2vv4dn8"
+              >
+                <div
+                  class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
+                >
+                  <div
+                    style="display: contents;"
+                  >
+                    <div
+                      class="footer_footerWrapper__2vv4dnc"
+                    >
+                      <div
+                        class="csl-footer__wrapper footer_footerLinkWrapper__2vv4dnd"
+                        role="list"
+                      >
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Security
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Cookies
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Privacy
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Rates & Charges
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
           </main>
           <footer
             class="csl-footer footer_footer__2vv4dn0 footer_marginTop_03__2vv4dn5"
@@ -401,6 +859,21 @@ exports[`App renders Black Horse blank template 1`] = `
                           </span>
                         </span>
                       </a>
+                      <a
+                        class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf sc-bdDsiv czeKQS"
+                        data-discover="true"
+                        href="/get-plan-progress"
+                      >
+                        <span
+                          class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                        >
+                          <span
+                            class="csl-link__children"
+                          >
+                            Plan Progress
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -410,12 +883,226 @@ exports[`App renders Black Horse blank template 1`] = `
           <main
             class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
           >
-            <span
-              class="csl-typography csl-heading-s4 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s4__11j2ameq typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s4__11j2ame23 typography_sizeStylesByVariation_heading_s4__11j2ame37 typography_weightStylesByVariationAndSize_heading_s4_default__11j2ame51 sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
-              role="heading"
+            <div
+              class="csl-journey-header journeyHeader_journeyHeader__1b2hjfh0"
             >
-               Hello Lloyds 
-            </span>
+              <h1
+                class="csl-typography csl-heading-s7 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s7__11j2amet typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s7__11j2ame26 typography_sizeStylesByVariation_heading_s7__11j2ame3a typography_weightStylesByVariationAndSize_heading_s7_default__11j2ame5a sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
+              >
+                Let's put a plan into action
+              </h1>
+            </div>
+            <div
+              class="home-page-content"
+            >
+              <div
+                class="home-page-hero-container"
+              >
+                <img
+                  alt=""
+                  src="/door-mobile-hero-ftb.jpg"
+                />
+              </div>
+              <form
+                aria-busy="false"
+                class="home-page-options"
+              >
+                <fieldset
+                  aria-describedby="cohort-hint cohort-error"
+                  class="csl-field sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_07_xs__o77fkn7i sprinkles_marginLeft_none_xs__o77fkn8i labeledField_labeledField__10j5v5j0"
+                >
+                  <legend
+                    class="csl-field-label fieldLabel_fieldLabel__1au2tb0"
+                    data-csl-selector="field-label"
+                  >
+                    <span
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                    >
+                      Where are you on your home buying journey?
+                    </span>
+                  </legend>
+                  <div
+                    id="cohort-hint"
+                  />
+                  <div
+                    id="cohort-error"
+                  />
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-aspirational"
+                      name="cohort"
+                      type="radio"
+                      value="ASPIRATIONAL"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-aspirational"
+                    >
+                      I'm Aspiring to be a First Time Buyer
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-prospective"
+                      name="cohort"
+                      type="radio"
+                      value="PROSPECTIVE"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-prospective"
+                    >
+                      I have saved some money and want to buy a home
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container csl-radio-button-group__item-last radioButtonGroup_lastItem__b3ib5q0"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-cusp"
+                      name="cohort"
+                      type="radio"
+                      value="CUSP"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-cusp"
+                    >
+                      I have a deposit and have a lot of knowledge about buying a home
+                    </label>
+                  </div>
+                </fieldset>
+                <button
+                  class="csl-button button__1q99b4cd button_buttonBase__1q99b4c0 button_buttonRecipe_variation_primary__1q99b4ce button_buttonRecipe_inverse_true__1q99b4cg button_buttonRecipe_accent_false__1q99b4cj button_widthVariants_content__1q99b4c2 button_primaryInverse__1q99b4c5 csl-button--primary sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  type="submit"
+                >
+                  <span
+                    class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  >
+                    Create plan
+                  </span>
+                </button>
+              </form>
+            </div>
+            <div
+              class="home-page-footer"
+            >
+              <footer
+                class="csl-footer footer_footer__2vv4dn0 footer_marginTop_06__2vv4dn8"
+              >
+                <div
+                  class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
+                >
+                  <div
+                    style="display: contents;"
+                  >
+                    <div
+                      class="footer_footerWrapper__2vv4dnc"
+                    >
+                      <div
+                        class="csl-footer__wrapper footer_footerLinkWrapper__2vv4dnd"
+                        role="list"
+                      >
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Security
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Cookies
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Privacy
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Rates & Charges
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
           </main>
           <footer
             class="csl-footer footer_footer__2vv4dn0 footer_marginTop_03__2vv4dn5"
@@ -534,6 +1221,21 @@ exports[`App renders Halifax blank template 1`] = `
                           </span>
                         </span>
                       </a>
+                      <a
+                        class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf sc-bdDsiv czeKQS"
+                        data-discover="true"
+                        href="/get-plan-progress"
+                      >
+                        <span
+                          class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                        >
+                          <span
+                            class="csl-link__children"
+                          >
+                            Plan Progress
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -543,12 +1245,226 @@ exports[`App renders Halifax blank template 1`] = `
           <main
             class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
           >
-            <span
-              class="csl-typography csl-heading-s4 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s4__11j2ameq typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s4__11j2ame23 typography_sizeStylesByVariation_heading_s4__11j2ame37 typography_weightStylesByVariationAndSize_heading_s4_default__11j2ame51 sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
-              role="heading"
+            <div
+              class="csl-journey-header journeyHeader_journeyHeader__1b2hjfh0"
             >
-               Hello Lloyds 
-            </span>
+              <h1
+                class="csl-typography csl-heading-s7 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s7__11j2amet typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s7__11j2ame26 typography_sizeStylesByVariation_heading_s7__11j2ame3a typography_weightStylesByVariationAndSize_heading_s7_default__11j2ame5a sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
+              >
+                Let's put a plan into action
+              </h1>
+            </div>
+            <div
+              class="home-page-content"
+            >
+              <div
+                class="home-page-hero-container"
+              >
+                <img
+                  alt=""
+                  src="/door-mobile-hero-ftb.jpg"
+                />
+              </div>
+              <form
+                aria-busy="false"
+                class="home-page-options"
+              >
+                <fieldset
+                  aria-describedby="cohort-hint cohort-error"
+                  class="csl-field sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_07_xs__o77fkn7i sprinkles_marginLeft_none_xs__o77fkn8i labeledField_labeledField__10j5v5j0"
+                >
+                  <legend
+                    class="csl-field-label fieldLabel_fieldLabel__1au2tb0"
+                    data-csl-selector="field-label"
+                  >
+                    <span
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                    >
+                      Where are you on your home buying journey?
+                    </span>
+                  </legend>
+                  <div
+                    id="cohort-hint"
+                  />
+                  <div
+                    id="cohort-error"
+                  />
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-aspirational"
+                      name="cohort"
+                      type="radio"
+                      value="ASPIRATIONAL"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-aspirational"
+                    >
+                      I'm Aspiring to be a First Time Buyer
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-prospective"
+                      name="cohort"
+                      type="radio"
+                      value="PROSPECTIVE"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-prospective"
+                    >
+                      I have saved some money and want to buy a home
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container csl-radio-button-group__item-last radioButtonGroup_lastItem__b3ib5q0"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-cusp"
+                      name="cohort"
+                      type="radio"
+                      value="CUSP"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-cusp"
+                    >
+                      I have a deposit and have a lot of knowledge about buying a home
+                    </label>
+                  </div>
+                </fieldset>
+                <button
+                  class="csl-button button__1q99b4cd button_buttonBase__1q99b4c0 button_buttonRecipe_variation_primary__1q99b4ce button_buttonRecipe_inverse_true__1q99b4cg button_buttonRecipe_accent_false__1q99b4cj button_widthVariants_content__1q99b4c2 button_primaryInverse__1q99b4c5 csl-button--primary sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  type="submit"
+                >
+                  <span
+                    class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  >
+                    Create plan
+                  </span>
+                </button>
+              </form>
+            </div>
+            <div
+              class="home-page-footer"
+            >
+              <footer
+                class="csl-footer footer_footer__2vv4dn0 footer_marginTop_06__2vv4dn8"
+              >
+                <div
+                  class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
+                >
+                  <div
+                    style="display: contents;"
+                  >
+                    <div
+                      class="footer_footerWrapper__2vv4dnc"
+                    >
+                      <div
+                        class="csl-footer__wrapper footer_footerLinkWrapper__2vv4dnd"
+                        role="list"
+                      >
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Security
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Cookies
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Privacy
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Rates & Charges
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
           </main>
           <footer
             class="csl-footer footer_footer__2vv4dn0 footer_marginTop_03__2vv4dn5"
@@ -672,6 +1588,21 @@ exports[`App renders Lloyds blank template 1`] = `
                           </span>
                         </span>
                       </a>
+                      <a
+                        class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf sc-bdDsiv cQFxKI"
+                        data-discover="true"
+                        href="/get-plan-progress"
+                      >
+                        <span
+                          class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                        >
+                          <span
+                            class="csl-link__children"
+                          >
+                            Plan Progress
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -681,12 +1612,226 @@ exports[`App renders Lloyds blank template 1`] = `
           <main
             class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
           >
-            <span
-              class="csl-typography csl-heading-s4 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s4__11j2ameq typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s4__11j2ame23 typography_sizeStylesByVariation_heading_s4__11j2ame37 typography_weightStylesByVariationAndSize_heading_s4_default__11j2ame51 sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
-              role="heading"
+            <div
+              class="csl-journey-header journeyHeader_journeyHeader__1b2hjfh0"
             >
-               Hello Lloyds 
-            </span>
+              <h1
+                class="csl-typography csl-heading-s7 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s7__11j2amet typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s7__11j2ame26 typography_sizeStylesByVariation_heading_s7__11j2ame3a typography_weightStylesByVariationAndSize_heading_s7_default__11j2ame5a sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
+              >
+                Let's put a plan into action
+              </h1>
+            </div>
+            <div
+              class="home-page-content"
+            >
+              <div
+                class="home-page-hero-container"
+              >
+                <img
+                  alt=""
+                  src="/door-mobile-hero-ftb.jpg"
+                />
+              </div>
+              <form
+                aria-busy="false"
+                class="home-page-options"
+              >
+                <fieldset
+                  aria-describedby="cohort-hint cohort-error"
+                  class="csl-field sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_07_xs__o77fkn7i sprinkles_marginLeft_none_xs__o77fkn8i labeledField_labeledField__10j5v5j0"
+                >
+                  <legend
+                    class="csl-field-label fieldLabel_fieldLabel__1au2tb0"
+                    data-csl-selector="field-label"
+                  >
+                    <span
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                    >
+                      Where are you on your home buying journey?
+                    </span>
+                  </legend>
+                  <div
+                    id="cohort-hint"
+                  />
+                  <div
+                    id="cohort-error"
+                  />
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-aspirational"
+                      name="cohort"
+                      type="radio"
+                      value="ASPIRATIONAL"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-aspirational"
+                    >
+                      I'm Aspiring to be a First Time Buyer
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-prospective"
+                      name="cohort"
+                      type="radio"
+                      value="PROSPECTIVE"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-prospective"
+                    >
+                      I have saved some money and want to buy a home
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container csl-radio-button-group__item-last radioButtonGroup_lastItem__b3ib5q0"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-cusp"
+                      name="cohort"
+                      type="radio"
+                      value="CUSP"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-cusp"
+                    >
+                      I have a deposit and have a lot of knowledge about buying a home
+                    </label>
+                  </div>
+                </fieldset>
+                <button
+                  class="csl-button button__1q99b4cd button_buttonBase__1q99b4c0 button_buttonRecipe_variation_primary__1q99b4ce button_buttonRecipe_inverse_true__1q99b4cg button_buttonRecipe_accent_false__1q99b4cj button_widthVariants_content__1q99b4c2 button_primaryInverse__1q99b4c5 csl-button--primary sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  type="submit"
+                >
+                  <span
+                    class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  >
+                    Create plan
+                  </span>
+                </button>
+              </form>
+            </div>
+            <div
+              class="home-page-footer"
+            >
+              <footer
+                class="csl-footer footer_footer__2vv4dn0 footer_marginTop_06__2vv4dn8"
+              >
+                <div
+                  class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
+                >
+                  <div
+                    style="display: contents;"
+                  >
+                    <div
+                      class="footer_footerWrapper__2vv4dnc"
+                    >
+                      <div
+                        class="csl-footer__wrapper footer_footerLinkWrapper__2vv4dnd"
+                        role="list"
+                      >
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Security
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Cookies
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Privacy
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Rates & Charges
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
           </main>
           <footer
             class="csl-footer footer_footer__2vv4dn0 footer_marginTop_03__2vv4dn5"
@@ -801,6 +1946,21 @@ exports[`App renders MBNA blank template 1`] = `
                           </span>
                         </span>
                       </a>
+                      <a
+                        class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf sc-bdDsiv czeKQS"
+                        data-discover="true"
+                        href="/get-plan-progress"
+                      >
+                        <span
+                          class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                        >
+                          <span
+                            class="csl-link__children"
+                          >
+                            Plan Progress
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -810,12 +1970,226 @@ exports[`App renders MBNA blank template 1`] = `
           <main
             class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
           >
-            <span
-              class="csl-typography csl-heading-s4 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s4__11j2ameq typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s4__11j2ame23 typography_sizeStylesByVariation_heading_s4__11j2ame37 typography_weightStylesByVariationAndSize_heading_s4_default__11j2ame51 sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
-              role="heading"
+            <div
+              class="csl-journey-header journeyHeader_journeyHeader__1b2hjfh0"
             >
-               Hello Lloyds 
-            </span>
+              <h1
+                class="csl-typography csl-heading-s7 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s7__11j2amet typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s7__11j2ame26 typography_sizeStylesByVariation_heading_s7__11j2ame3a typography_weightStylesByVariationAndSize_heading_s7_default__11j2ame5a sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
+              >
+                Let's put a plan into action
+              </h1>
+            </div>
+            <div
+              class="home-page-content"
+            >
+              <div
+                class="home-page-hero-container"
+              >
+                <img
+                  alt=""
+                  src="/door-mobile-hero-ftb.jpg"
+                />
+              </div>
+              <form
+                aria-busy="false"
+                class="home-page-options"
+              >
+                <fieldset
+                  aria-describedby="cohort-hint cohort-error"
+                  class="csl-field sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_07_xs__o77fkn7i sprinkles_marginLeft_none_xs__o77fkn8i labeledField_labeledField__10j5v5j0"
+                >
+                  <legend
+                    class="csl-field-label fieldLabel_fieldLabel__1au2tb0"
+                    data-csl-selector="field-label"
+                  >
+                    <span
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                    >
+                      Where are you on your home buying journey?
+                    </span>
+                  </legend>
+                  <div
+                    id="cohort-hint"
+                  />
+                  <div
+                    id="cohort-error"
+                  />
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-aspirational"
+                      name="cohort"
+                      type="radio"
+                      value="ASPIRATIONAL"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-aspirational"
+                    >
+                      I'm Aspiring to be a First Time Buyer
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-prospective"
+                      name="cohort"
+                      type="radio"
+                      value="PROSPECTIVE"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-prospective"
+                    >
+                      I have saved some money and want to buy a home
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container csl-radio-button-group__item-last radioButtonGroup_lastItem__b3ib5q0"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-cusp"
+                      name="cohort"
+                      type="radio"
+                      value="CUSP"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-cusp"
+                    >
+                      I have a deposit and have a lot of knowledge about buying a home
+                    </label>
+                  </div>
+                </fieldset>
+                <button
+                  class="csl-button button__1q99b4cd button_buttonBase__1q99b4c0 button_buttonRecipe_variation_primary__1q99b4ce button_buttonRecipe_inverse_true__1q99b4cg button_buttonRecipe_accent_false__1q99b4cj button_widthVariants_content__1q99b4c2 button_primaryInverse__1q99b4c5 csl-button--primary sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  type="submit"
+                >
+                  <span
+                    class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  >
+                    Create plan
+                  </span>
+                </button>
+              </form>
+            </div>
+            <div
+              class="home-page-footer"
+            >
+              <footer
+                class="csl-footer footer_footer__2vv4dn0 footer_marginTop_06__2vv4dn8"
+              >
+                <div
+                  class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
+                >
+                  <div
+                    style="display: contents;"
+                  >
+                    <div
+                      class="footer_footerWrapper__2vv4dnc"
+                    >
+                      <div
+                        class="csl-footer__wrapper footer_footerLinkWrapper__2vv4dnd"
+                        role="list"
+                      >
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Security
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Cookies
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Privacy
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Rates & Charges
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
           </main>
           <footer
             class="csl-footer footer_footer__2vv4dn0 footer_marginTop_03__2vv4dn5"
@@ -935,6 +2309,21 @@ exports[`App renders Scottish Widows blank template 1`] = `
                           </span>
                         </span>
                       </a>
+                      <a
+                        class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf sc-bdDsiv cQFxKI"
+                        data-discover="true"
+                        href="/get-plan-progress"
+                      >
+                        <span
+                          class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                        >
+                          <span
+                            class="csl-link__children"
+                          >
+                            Plan Progress
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -944,12 +2333,226 @@ exports[`App renders Scottish Widows blank template 1`] = `
           <main
             class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
           >
-            <span
-              class="csl-typography csl-heading-s4 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s4__11j2ameq typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s4__11j2ame23 typography_sizeStylesByVariation_heading_s4__11j2ame37 typography_weightStylesByVariationAndSize_heading_s4_default__11j2ame51 sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
-              role="heading"
+            <div
+              class="csl-journey-header journeyHeader_journeyHeader__1b2hjfh0"
             >
-               Hello Lloyds 
-            </span>
+              <h1
+                class="csl-typography csl-heading-s7 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_heading_s7__11j2amet typography_textTransform_heading__11j2ame1i typography_display_heading__11j2ame1m typography_letterSpacingStylesByVariationAndSize_heading_s7__11j2ame26 typography_sizeStylesByVariation_heading_s7__11j2ame3a typography_weightStylesByVariationAndSize_heading_s7_default__11j2ame5a sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_05_xs__o77fkn70 sprinkles_marginLeft_none_xs__o77fkn8i"
+              >
+                Let's put a plan into action
+              </h1>
+            </div>
+            <div
+              class="home-page-content"
+            >
+              <div
+                class="home-page-hero-container"
+              >
+                <img
+                  alt=""
+                  src="/door-mobile-hero-ftb.jpg"
+                />
+              </div>
+              <form
+                aria-busy="false"
+                class="home-page-options"
+              >
+                <fieldset
+                  aria-describedby="cohort-hint cohort-error"
+                  class="csl-field sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_07_xs__o77fkn7i sprinkles_marginLeft_none_xs__o77fkn8i labeledField_labeledField__10j5v5j0"
+                >
+                  <legend
+                    class="csl-field-label fieldLabel_fieldLabel__1au2tb0"
+                    data-csl-selector="field-label"
+                  >
+                    <span
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_bold__11j2ame6l sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                    >
+                      Where are you on your home buying journey?
+                    </span>
+                  </legend>
+                  <div
+                    id="cohort-hint"
+                  />
+                  <div
+                    id="cohort-error"
+                  />
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-aspirational"
+                      name="cohort"
+                      type="radio"
+                      value="ASPIRATIONAL"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-aspirational"
+                    >
+                      I'm Aspiring to be a First Time Buyer
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-prospective"
+                      name="cohort"
+                      type="radio"
+                      value="PROSPECTIVE"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-prospective"
+                    >
+                      I have saved some money and want to buy a home
+                    </label>
+                  </div>
+                  <div
+                    class="radioButton_container__1nsilgu0 csl-radio-button-container csl-radio-button-group__item-last radioButtonGroup_lastItem__b3ib5q0"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="radioButton_input__1nsilgu1 csl-radio-button__input"
+                      id="cohort-cusp"
+                      name="cohort"
+                      type="radio"
+                      value="CUSP"
+                    />
+                    <label
+                      class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inverseDefault1__11j2ame7 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i radioButton_label__1nsilgu2 csl-radio-button"
+                      for="cohort-cusp"
+                    >
+                      I have a deposit and have a lot of knowledge about buying a home
+                    </label>
+                  </div>
+                </fieldset>
+                <button
+                  class="csl-button button__1q99b4cd button_buttonBase__1q99b4c0 button_buttonRecipe_variation_primary__1q99b4ce button_buttonRecipe_inverse_true__1q99b4cg button_buttonRecipe_accent_false__1q99b4cj button_widthVariants_content__1q99b4c2 button_primaryInverse__1q99b4c5 csl-button--primary sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  type="submit"
+                >
+                  <span
+                    class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                  >
+                    Create plan
+                  </span>
+                </button>
+              </form>
+            </div>
+            <div
+              class="home-page-footer"
+            >
+              <footer
+                class="csl-footer footer_footer__2vv4dn0 footer_marginTop_06__2vv4dn8"
+              >
+                <div
+                  class="csl-container csl-container--default container_container__1kc85x30 container_marginBottom_none__1kc85x32 container_marginTop_none__1kc85x3d container_padding_default__1kc85x3n container_width_default__1kc85x3q"
+                >
+                  <div
+                    style="display: contents;"
+                  >
+                    <div
+                      class="footer_footerWrapper__2vv4dnc"
+                    >
+                      <div
+                        class="csl-footer__wrapper footer_footerLinkWrapper__2vv4dnd"
+                        role="list"
+                      >
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Security
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Cookies
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Privacy
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div
+                          class="csl-footer__item footerItem_footerItem__4fad600"
+                          role="listitem"
+                        >
+                          <a
+                            class="csl-link csl-link--default csl-link--inverse link__10hx3p9 link_linkBase__10hx3p0 link_colorInverse__10hx3p4 link_linkRecipe_underline_true__10hx3pf"
+                            href="https://www.lloydsbankinggroup.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <span
+                              class="csl-typography csl-text-s2 typography_base__11j2ame0 typography_color_inherit__11j2ame1 typography_fontFamilyStylesByVariationAndSize_text_s2__11j2ame18 typography_textTransform_text__11j2ame1k typography_display_text__11j2ame1o typography_letterSpacingStylesByVariationAndSize_text_s2__11j2ame2l typography_sizeStylesByVariation_text_s2__11j2ame3p typography_weightStylesByVariationAndSize_text_s2_normal__11j2ame6k sprinkles_marginTop_none_xs__o77fkn9 sprinkles_marginRight_none_xs__o77fkn30 sprinkles_marginBottom_none_xs__o77fkn5r sprinkles_marginLeft_none_xs__o77fkn8i"
+                            >
+                              <span
+                                class="csl-link__children"
+                              >
+                                Rates & Charges
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
           </main>
           <footer
             class="csl-footer footer_footer__2vv4dn0 footer_marginTop_03__2vv4dn5"
